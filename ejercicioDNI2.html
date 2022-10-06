@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v2</title>
+</head>
+
+<body>
+    <script>
+        let calcular = (param) => {
+            if (isNaN(param)) {
+                alert("Eso no es un numero");
+                calcular(param);
+            } else {
+                if (param < 0 || param > 99999999) {
+                    return "";
+                } else {
+                    const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+                    let resto = param % 23;
+                    let letra = letras[resto];
+                    return letra;
+                }
+            }
+        };
+
+        let quieresSeguir = true;
+        while (quieresSeguir) {
+            let numero = prompt("Introduce el numero del DNI");
+            let letra = calcular(numero);
+            alert(letra);
+            quieresSeguir = confirm("¿Quieres continuar?");
+        }
+    </script>
+</body>
+
+</html>
