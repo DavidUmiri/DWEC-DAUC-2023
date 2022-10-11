@@ -10,16 +10,23 @@
 
 <body>
     <script>
-        let calcular = (param) => {
-            if (isNaN(param)) {
+        // Creo una funcion flecha en la que calculare la letra de un DNI.
+        let calcular = (num) => {
+            // Verifico que el parametro pasado no es un numero.
+            if (isNaN(num)) {
                 alert("Eso no es un numero");
-                calcular(param);
+                calcular(num);
             } else {
-                if (param < 0 || param > 99999999) {
+                // En caso de que lo sea y cumpla la siguiente condicion.
+                if (num < 0 || num > 99999999) {
+                    // Devuelvo una cadena vacia.
                     return "";
                 } else {
+                    // Si es un numero y no se encuentra en el rango anterior.
+                    // Copio la constante de las letras del DNI y calculo el resto del numero introducido dividido entre 23.
                     const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
-                    let resto = param % 23;
+                    let resto = num % 23;
+                    // Posicion que se le asigna al resto.
                     let letra = letras[resto];
                     return letra;
                 }
@@ -27,6 +34,7 @@
         };
 
         let quieresSeguir = true;
+        // Bucle que calcula el DNI y en casi de no querer continuar, finaliza.
         while (quieresSeguir) {
             let numero = prompt("Introduce el numero del DNI");
             let letra = calcular(numero);

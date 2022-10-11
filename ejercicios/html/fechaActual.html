@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="dateDocumentSet.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-
+    <script>
+        // Programa que pasados 20 segundos nos muestre la fecha actual.
+        let fechaActual = new Date();
+        fechaActual.toUTCString();
+        setTimeout("document.write(fechaActual)", 2000);
+    </script>
 </body>
 
 </html>
