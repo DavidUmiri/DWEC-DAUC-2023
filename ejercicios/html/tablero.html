@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero aleatorio</title>
+</head>
+
+<body>
+
+    <script defer>
+
+        const limite = prompt("tamaño del tablero");
+        let tablero = []
+        let minas = []
+
+        function aleatorio() {
+            return Math.ceil(limite * Math.random())
+        }
+        function generarTablero() {
+            for (let i = 0; i < limite; i++) {
+                // para que sirve new Array(10)?
+                tablero[i] = new Array(10)
+                for (let j = 0; j < limite; j++) {
+                    tablero[i][j] = 0
+                }
+            }
+        }
+        function generarMinas() {
+            for (let i = 0; i < limite / 2; i++) {
+                minas[i] = tablero[i]
+                for (let j = 0; j < limite; j++) {
+                    minas[i][j] = 1
+                }
+            }
+        }
+
+        generarTablero()
+        console.log("Tablero generado", tablero)
+
+        generarMinas()
+        console.log("Minas generadas", minas)
+
+    </script>
+
+</body>
+
+</html>

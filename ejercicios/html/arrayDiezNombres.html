@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,23 @@
 </head>
 
 <body>
-    <script>
+    <script defer>
+        let nombres = ""
+        let nombresArray = []
 
-        let nombres = prompt("Introduce 10 nombres");
-        let nombres2 = nombres.split(" ");
-        nombres2;
-        nombres2.length;
-        nombres2.sort();
-        nombres2.reverse();
+        do {
+            nombres = prompt("Introduce 10 nombres")
+            // split() construye un array a partir de una cadena y un separador
+            nombresArray = nombres.split(",")
+        } while (nombresArray.length !== 10)
+
+        console.log(nombresArray);
+        // length muestra la longitud del array
+        console.log("Numero de nombres: " + nombresArray.length)
+        // sort() ordena por orden alfabetico
+        console.log("Nombres ordenados: " + nombresArray.sort())
+        // reverse() ordena en orden inverso
+        console.log("Nombres en orden inverso:" + nombresArray.reverse())
 
     </script>
 </body>
