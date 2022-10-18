@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+
+        // crear map
+        const materias = new Map()
+        materias.set('dwec', "desarrollo web en entorno cliente")
+        materias.set('diw', "diseño de interfaces web")
+        materias.set('dwes', "desarrollo web en entorno servidor")
+        materias.set('daw', "desarrollo de aplicaciones web")
+
+        // crear maps v2
+        let persona = new Map([
+            ['nombre', 'Agustin'],
+            ['apellido', 'Aguilera'],
+            ['edad', 99]
+        ]);
+
+        // mostrar cuanto modulos hay
+        console.log(`El tamaño es: ${materias.size}`)
+
+        // mostrar el contenido de la estructura (foreach)
+        materias.forEach(function (valor) {
+            console.log(`materia: ${valor}`)
+        })
+
+        // devuelve las abreviaturas de los modulos
+        materias.keys()
+
+        // devuelve el nombre completo (for...of)
+        for (const [, valor] of materias.entries()) {
+            console.log(valor)
+        }
+        // v2
+        for (let v of materias.values()) {
+            console.log(`${v}`)
+        }
+
+        // consultar si el modulo daw esta
+        materias.has("daw")
+
+        // si esta, eliminalo
+        materias.delete("daw")
+
+    </script>
+
+</body>
+
+</html>

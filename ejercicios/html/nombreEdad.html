@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script defer>
+
+        let nombres = []
+        let edades = []
+        let dupla = ""
+
+        for (let i = 0; i < 6; i++) {
+            dupla = prompt("Introduce  (nombre,edad)").split(",")
+            // validar que tenemos un array de dos elementos
+            if (dupla.length === 2) {
+                nombres.push(dupla[0])
+                edades.push(parseInt(dupla[1]))
+            }
+        }
+
+        const nombres2 = ['juan', 'lucas', 'pedro']
+        nombres2.forEach(element => console.log(element)) // forEach
+
+        for (let resultado of nombres2) {
+            resultado += 1
+            console.log(resultado)
+        } // for of
+
+        total = edades.reduce((a, b) => a + b, 0); // suma array
+        console.log(total / 6);
+
+
+    </script>
+
+    <button onclick="añadirNombre()"></button>
+</body>
+
+</html>
