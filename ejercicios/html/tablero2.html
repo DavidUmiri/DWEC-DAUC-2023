@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="idTablero"></div>
+
+    <script>
+
+        function dibujarTablero() {
+
+            let tabla = document.createElement("table")
+            let tablero = document
+            for (let i = 0; i < 10; i++) {
+                let fila = document.createElement("tr")
+                table.append(fila)
+                for (let j = 0; j < 10; j++) {
+                    let columna = document.createElement("td")
+                    table.append(columna)
+                }
+            }
+        }
+        dibujarTablero()
+    </script>
+
+</body>
+
+</html>
