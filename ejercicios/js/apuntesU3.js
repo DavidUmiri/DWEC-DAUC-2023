@@ -1,11 +1,15 @@
 // Creamos un intervalo que cada 15 segundos muestra mensaje hola
 let idA = setInterval("alert(‘hola’);", 15000);
+
 // Creamos un timeout que cuando pasen 3 segundos muestra mensaje adios
 let idB = setTimeout("alert(‘adios’);", 3000);
+
 // Creamos un timeout que cuando pasen 5 segundos muestra mensaje
 let idC = setTimeout("alert(‘estonoseve’);", 5000);
+
 // Cancelamos el ultimo timeout
 clearTimeout(idC);
+
 // Abrir una ventana
 let nuevaVentana = window.open();
 let nuevaVentana2 = window.open(
@@ -13,17 +17,21 @@ let nuevaVentana2 = window.open(
   "Publicidad",
   "height=100, width=100"
 );
+
 // Cerrar ventana
 let cerrarVentana = myWindow1.document.write(
   "<input type=button value=Cerrar onClick=window.close()>"
 );
+
 // Array, pop/push al final, unshift/shift sl principio
 let a = [];
 a.push(4);
 a.push(5);
 a.push(6);
+
 // join: construye una cadena y coloca un separador
 let c = join(a, "-");
+
 // Ordenar reverse(), sort()
 // Array functions
 var array = ["a", "bb", "bc", "d"];
@@ -38,5 +46,6 @@ var valor = array.find((e) => e[0] == "b"); //’bb’
 // find(), filter()
 // every(), some()
 // foreach()
+
 alumnos.forEach((a) => alert(`Hola alumno ${a}`));
 // split() para 10 veces

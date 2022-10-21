@@ -1,0 +1,40 @@
+footer {
+  margin-top: 2%;
+  background-color: aqua;
+  column-count: 6;
+  column-gap: 10px;
+  column-rule-style: solid;
+  column-rule-width: 5px;
+  column-rule-color: red;
+}
+
+footer img {
+  position: static;
+  height: auto;
+}
+
+#contacto {
+  font-size: 11px;
+  text-align: center;
+}
+
+#github {
+  width: 35%;
+  margin: 20px 40px;
+}
+#facebook {
+  width: 30%;
+  margin: 20px 40px;
+}
+#google {
+  width: 30%;
+  margin: 20px 40px;
+}
+#instagram {
+  width: 30%;
+  margin: 20px 40px;
+}
+#linked {
+  width: 60%;
+  padding: 10px;
+}
