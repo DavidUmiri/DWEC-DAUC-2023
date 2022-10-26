@@ -2,16 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
 <body>
-
     <p id="elemento">esta pagina es <strong>muy simple</strong></p>
-    <input id="nombre" value="que onda crack">
+    <input id="nombre" value="que onda crack" />
     <p>primer parrafo</p>
     <p>segundo parrafo</p>
     <p>tercer parrafo</p>
@@ -21,48 +20,57 @@
         <p>parrafo 1</p>
         <p>parrafo 2</p>
     </div>
-    <input type="checkbox" name="name">
-    <input type="checkbox" name="no">
-    <input type="checkbox" name="name">
+    <input type="checkbox" name="name" />
+    <input type="checkbox" name="no" />
+    <input type="checkbox" name="name" />
     <p class="name">class name 1</p>
     <p class="name">class name 2</p>
     <p class="name">class name 3</p>
 
     <script>
+
         // propiedades de un nodo
-        let contenido = elemento.innerHTML // coge el codigo
-        let contenido2 = elemento.textContent // coge solo el texto
-        let contenido3 = nombre.value // coge el valor del input
+        let codigo = elemento.innerHTML; // coge el codigo
+        let contenido = elemento.textContent; // coge solo el texto
+        let valor = nombre.value; // coge el valor del input
 
         // no se recomienda utilizar
-        document.write()
+        document.write();
 
         // acceso desde propiedades del document
-        document.documentElement // devuelve el nodo del elemento <html>
-        document.head // devuelve el nodo del elemento <head>
-        document.body
-        document.title
-        document.links // devuelve una coleccion con todos los hiperenlaces del documento
-        document.anchor
-        document.forms
-        document.images
-        document.scripts // devuelve una coleccion con todos los script
+        document.documentElement; // devuelve el nodo del elemento <html>
+        document.head; // devuelve el nodo del elemento <head>
+        document.body;
+        document.title;
+        document.links; // devuelve una coleccion con todos los hiperenlaces del documento
+        document.anchor;
+        document.forms;
+        document.images;
+        document.scripts; // devuelve una coleccion con todos los script
 
         // acceso a nodo desde metodos del document
-        let x = document.getElementById("div") // id
-        console.log(`El html de mi div es ${x.innerHTML}`)
-        let y = x.getElementsByTagName("p") // elemento <p>
-        let num = y.length
-        console.log(`hay ${num} <p> elementos en el elemento div`)
-        console.log(`en el primer p el html asociado es ${y[0].innerHTML}`)
-        let z = document.getElementsByName("name") // coge los input name="name"
-        for (let i = 0; i < z.length; i++) { // marcamos todos los checkbox que tengan name como nombre
+        let x = document.getElementById("div"); // id
+        console.log(`El html de mi div es ${x.innerHTML}`);
+
+        let y = x.getElementsByTagName("p"); // elemento <p>
+
+        let num = y.length;
+
+        console.log(`hay ${num} <p> elementos en el elemento div`);
+        console.log(`en el primer p el html asociado es ${y[0].innerHTML}`);
+
+        let z = document.getElementsByName("name"); // coge los input name="name"
+
+        for (let i = 0; i < z.length; i++) {
+            // marcamos todos los checkbox que tengan name como nombre
             if (z[i].type == "checkbox") {
-                z[i].checked = true
+                z[i].checked = true;
             }
         }
-        let j = document.getElementsByClassName("name") // coge los elementos class="name"
-        console.log(j)
+
+        let j = document.getElementsByClassName("name")[0]; // coge la primera posicion de los elementos class="name"
+        console.log(j);
+        j.parentElement; // el padre del elemento
 
         // resumen
         // document.getElementById("id")
@@ -70,14 +78,37 @@
         // document.getElementsByTagName("etiqueta")
         // document.getElementsByClassName("name")
 
+        // ******************************************************
+
+        // acceso a nodo utilizando  selectores css
+        let nodo = document.querySelector("p.error"); // primer parrafo de la clase error
+        let nodos = document.querySelectorAll("p.error"); // todos los parrafos de la clase error
+
+        // ******************************************************
+
+        // acceso a nodos a partir de otros
+        elemento.parentElement; // devuelve el elemento padre del elemento
+        elemento.children; // devuelve la coleccion con todos los elementos hijos
+        elemento.childNodes; // devuelve la coleccion con todos los hijos, incluyendo comentarios y nodos de tipo texto
+        elemento.firstElementChild; // devuelve el elemento HTML que es el primer hijo de elemento
+        elemento.firstChild; // devuelve el nodo que es el primer hijo de elemento
+        elemento.lastElementChild, elemento.lastChild; // igual pero con el ultimo hijo
+        elemento.nextElementSibling; // devuelve el elemento HTML que es el siguiente hermano de elemento
+        elemento.nextSibling; // devuelve el nodo que es el siguiente hermano de elemento
+        elemento.previousElementSibling; // igual pero con el hermano anterior
+        elemento.hasChildNodes; // indica si elemento tiene o no nodos hijos
+        elemento.childElementCount; // devuelve el nº de nodos hijo del elemento
+
+      // ******************************************************
+
     </script>
 
     <form id="idForm" name="nombreForm" class="miClase">
         <script>
-            document.getElementById("idForm")
-            document.getElementsByName("nombreForm")
-            document.getElementsByTagName("form")
-            document.getElementsByClassName("miClase")
+            document.getElementById("idForm");
+            document.getElementsByName("nombreForm");
+            document.getElementsByTagName("form");
+            document.getElementsByClassName("miClase");
         </script>
     </form>
 </body>
