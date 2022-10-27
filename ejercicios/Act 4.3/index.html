@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Este es un titulo dinamico</h1>
+    <button onclick="cambiar_color()">Cambiar color</button>
+    <button onclick="cambiar_fuente()">Cambiar tamano fuente</button>
+</body>
+
+<script>
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function cambiar_color() {
+        return document.body.style.backgroundColor = getRandomColor()
+    }
+
+    function cambiar_fuente() {
+        return document.body.style.fontFamily = 'Consolas'
+    }
+</script>
+
+</html>

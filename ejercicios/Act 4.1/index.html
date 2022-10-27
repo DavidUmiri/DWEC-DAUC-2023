@@ -9,12 +9,18 @@
 </head>
 
 <body>
+
+    <div id="div1">
+        <p>Primer párrafo</p>
+        <p>Segundo párrafo</p>
+        <p>Tercer párrafo</p>
+    </div>
+
     <script>
-        // Programa que pasados 20 segundos nos muestre la fecha actual.
-        let fechaActual = new Date();
-        fechaActual.toUTCString();
-        setTimeout("document.write(fechaActual)", 2000);
+        // devuelve la coleccion con todos los hijos de div, incluyendo comentarios y nodos de tipo texto
+        console.log(div1.childNodes) 
     </script>
+
 </body>
 
 </html>
