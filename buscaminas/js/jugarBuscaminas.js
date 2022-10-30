@@ -1,0 +1,1 @@
+// calcularNumMinas( x , y ){....}

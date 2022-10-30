@@ -3,10 +3,22 @@ body,
 main {
   box-sizing: border-box;
 }
+h1 {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 0px;
+  font-size: 3em;
+}
 header {
   background-color: aqua;
   text-align: center;
   position: sticky;
+  padding: 10px;
+  margin-top: 2%;
+  font-size: 2em;
+  nav {
+    background-color: red;
+  }
 }
 main {
   background-color: pink;
