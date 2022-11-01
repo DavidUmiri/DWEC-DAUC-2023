@@ -10,16 +10,17 @@ h1 {
   font-size: 3em;
 }
 header {
-  background-color: aqua;
+  background-color: cornflowerblue;
   text-align: center;
   position: sticky;
   padding: 10px;
   margin-top: 2%;
   font-size: 2em;
-  nav {
-    background-color: red;
+  nav a {
+    color: white;
+    text-decoration: none;
   }
 }
 main {
-  background-color: pink;
+  background-color: lightblue;
 }

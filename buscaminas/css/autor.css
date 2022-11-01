@@ -12,19 +12,20 @@ h1 {
 }
 
 header {
-  background-color: aqua;
+  background-color: cornflowerblue;
   text-align: center;
   position: sticky;
   padding: 10px;
   margin-top: 2%;
   font-size: 2em;
 }
-header nav {
-  background-color: red;
+header nav a {
+  color: white;
+  text-decoration: none;
 }
 
 main {
-  background-color: pink;
+  background-color: lightblue;
 }
 
 article {
@@ -35,67 +36,30 @@ article {
   margin-bottom: 2%;
   margin-top: 2%;
 }
+article p {
+  padding: 5px 30px;
+}
 
 img {
   height: 200px;
   width: 200px;
 }
 
-.a1 {
-  background-color: red;
-}
-
-.a2 {
-  background-color: yellow;
-}
-
-.a3 {
-  background-color: green;
-}
-
 footer {
-  margin-top: 2%;
-  background-color: aqua;
+  position: relative;
+  margin: 2% 0%;
+  padding: 2% 0%;
+  background-color: lightblue;
   column-count: 6;
-  column-gap: 10px;
-  column-rule-style: solid;
-  column-rule-width: 5px;
-  column-rule-color: red;
 }
-
-footer img {
-  position: static;
-  height: auto;
-}
-
-#contacto {
-  font-size: 11px;
+footer p {
   text-align: center;
+  font-style: italic;
 }
-
-#github {
-  width: 35%;
-  margin: 20px 40px;
-}
-
-#facebook {
-  width: 30%;
-  margin: 20px 40px;
-}
-
-#google {
-  width: 30%;
-  margin: 20px 40px;
-}
-
-#instagram {
-  width: 30%;
-  margin: 20px 40px;
-}
-
-#linked {
-  width: 60%;
-  padding: 10px;
+footer p img {
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
 }
 
 /* 
