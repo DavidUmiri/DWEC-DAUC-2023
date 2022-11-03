@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>Lista de la compra</label><br>
+    <ul id="id_ul">
+        <li>Patatas</li>
+        <li>Cerveza</li>
+        <li>Pan</li>
+        <li>Azucar</li>
+    </ul>
+    <input type="text" id="texto"><br>
+    <input type="submit" value="Añadir" onclick="añadir()">
+
+    <script>
+
+        // DOM: Modelo de Objetos del Documento
+        // nodo en el DOM: es cualquier etiqueta
+
+        let texto = document.getElementById("texto");
+
+        function añadir() {
+
+            let array = [];
+
+            for (let i = 0; i < array.length; i++) {
+
+            }
+
+        }
+
+        function eliminar() {
+
+            let ul = document.getElementById("id_ul");
+            let items = ul.getElementsByTagName("li");
+            let eliminar = ul.remove(items);
+
+        }
+
+    </script>
+</body>
+
+</html>
