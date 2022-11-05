@@ -6,7 +6,8 @@
 let tablero = [];
 const TAM_MAX = 10;
 
-function generarTablero() {
+//
+function generarTableroJS() {
   for (let i = 0; i < TAM_MAX; i++) {
     tablero[i] = new Array(TAM_MAX);
 
@@ -20,7 +21,8 @@ let numeroAleatorio = () => {
   return parseInt(TAM_MAX * Math.random());
 };
 
-function colocarBombas() {
+//
+function colocarBombasTableroJS() {
   let cont = 0;
   let i = 0;
   let j = 0;
@@ -36,7 +38,8 @@ function colocarBombas() {
   }
 }
 
-function dibujarTablero() {
+//
+function dibujarTableroHTML() {
   // ¿Ubicación de la tabla?
   let tableroHTML = document.getElementById("idTablero");
 
@@ -61,7 +64,7 @@ function dibujarTablero() {
   }
 }
 
-generarTablero();
-colocarBombas();
+generarTableroJS();
+colocarBombasTableroJS();
 console.log(tablero);
-dibujarTablero();
+dibujarTableroHTML();

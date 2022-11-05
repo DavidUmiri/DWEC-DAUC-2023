@@ -1,0 +1,64 @@
+html,
+body,
+main {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 0px;
+  font-size: 3em;
+}
+
+header {
+  background-color: cornflowerblue;
+  text-align: center;
+  position: sticky;
+  padding: 10px;
+  margin-top: 2%;
+  font-size: 2em;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: lime;
+  text-align: center;
+}
+table tr {
+  background-color: white;
+}
+table tr td {
+  width: 50px;
+  height: 50px;
+}
+
+/* 
+main.scss
+    _base_layout.scss (container, *, h1... informacion generica)
+    _menu_sup.scss
+    _menu_lateral.scss
+    _central.scss
+      _central_autor.scss
+      _central_juego.scss
+    _pie.scss
+
+Hacer uso de las ventajas/funcionalidades de sass:
+  - Comentarios de código
+  - Importar
+  - Variables - Interpolación
+  - Mapa de Colores 
+      Utilizando un tipo de dato --> map
+  - Función para calcular el tamaño celda : 
+      calcularTamanio( longitudTotal, numElementos )
+  - Mixins / Include
+  - Estructuras de control : 
+      IF / For / Each
+*/
+
+/*# sourceMappingURL=juego.css.map */

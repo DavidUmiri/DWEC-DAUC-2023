@@ -4,17 +4,10 @@ main {
   box-sizing: border-box;
 }
 
-h1 {
-  text-align: center;
-  padding-top: 40px;
-  margin-bottom: 0px;
-  font-size: 3em;
-}
-
 header {
+  position: relative;
   background-color: cornflowerblue;
   text-align: center;
-  position: sticky;
   padding: 10px;
   margin-top: 2%;
   font-size: 2em;
@@ -28,54 +21,54 @@ main {
   background-color: lightblue;
 }
 
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 3%;
+  font-size: 3em;
+}
+
 article {
   display: inline-block;
   text-align: center;
   width: 30%;
-  margin-left: 2.3%;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  margin-left: 35px;
+}
+article h2 {
+  text-decoration: underline;
 }
 article p {
   padding: 5px 30px;
 }
 
-img {
+main img {
   height: 200px;
   width: 200px;
 }
 
+.fechas {
+  border-style: ridge;
+  border-width: 3px;
+  border-color: aqua;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
 footer {
   position: relative;
-  margin: 2% 0%;
-  padding: 2% 0%;
   background-color: lightblue;
-  column-count: 6;
+  column-count: 5;
+  margin: 2% 0%;
 }
 footer p {
   text-align: center;
   font-style: italic;
+  margin: 4% auto;
 }
 footer p img {
   width: 50px;
   height: 50px;
   padding-top: 8%;
 }
-
-/* 
-main.scss
-    _base_layout.scss (container, *, h1... informacion generica)
-    _menu_sup.scss
-    _menu_lateral.scss
-    _central.scss
-    _pie.scss
-
-Todo codigo sass debe incluir:
-    importar
-    variables - interpolacion
-    mixins / include
-    comentarios
-    if 
-*/
-
-/*# sourceMappingURL=autor.css.map */

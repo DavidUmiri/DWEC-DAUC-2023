@@ -1,0 +1,25 @@
+article {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  margin-left: 35px;
+  h2 {
+    text-decoration: underline;
+  }
+  p {
+    padding: 5px 30px;
+  }
+}
+main img {
+  height: 200px;
+  width: 200px;
+}
+.fechas {
+  border-style: ridge;
+  border-width: 3px;
+  border-color: aqua;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
