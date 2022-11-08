@@ -1,0 +1,25 @@
+/Documentos/workspace/DIW-AEAS-2023
+
+Craer dos archivos .sh: subir.sh y actualizar.sh
+touch subir.sh
+touch actualizar.sh
+
+sudo chmod u+x subir.sh
+sudo chmod u+x actualizar.sh
+
+cat actualizar
+
+#!/bin/bash
+
+git pull origin main
+
+
+
+cat subir
+#!bin/bash
+read -p "Especifica un mensaje:>> " mensaje
+git add .
+git commit -m "Subiendo codigo"
+git push origin main
+
+echo "subida con exito"
