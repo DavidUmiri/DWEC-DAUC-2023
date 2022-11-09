@@ -5,6 +5,7 @@ main {
 }
 
 header {
+  color: white;
   position: relative;
   background-color: cornflowerblue;
   text-align: center;
@@ -18,23 +19,43 @@ header nav a {
 }
 
 main {
-  background-color: lightblue;
+  background-color: cornflowerblue;
 }
 
 h1 {
+  color: white;
   text-align: center;
   padding-top: 50px;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   font-size: 3em;
 }
 
+nav {
+  background-color: cornflowerblue;
+  margin-top: 1px;
+  font-size: 2em;
+  columns: 3;
+  column-rule: solid white 1px;
+  text-align: center;
+}
+nav li {
+  list-style: none;
+  padding: 8px;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+
 article {
+  color: white;
   display: inline-block;
   text-align: center;
   width: 30%;
   margin-left: 35px;
 }
 article h2 {
+  color: white;
   text-decoration: underline;
 }
 article p {
@@ -49,7 +70,7 @@ main img {
 .fechas {
   border-style: ridge;
   border-width: 3px;
-  border-color: aqua;
+  border-color: aquamarine;
   border-radius: 5px;
   width: fit-content;
   margin: 0 auto;
@@ -58,9 +79,10 @@ main img {
 
 footer {
   position: relative;
-  background-color: lightblue;
+  background-color: cornflowerblue;
   column-count: 5;
   margin: 2% 0%;
+  color: white;
 }
 footer p {
   text-align: center;
@@ -72,3 +94,21 @@ footer p img {
   height: 50px;
   padding-top: 8%;
 }
+
+/* 
+main.scss
+    _base_layout.scss (container, *, h1... informacion generica)
+    _menu_sup.scss
+    _menu_lateral.scss
+    _central.scss
+    _pie.scss
+
+Todo codigo sass debe incluir:
+    importar
+    variables - interpolacion
+    mixins / include
+    comentarios
+    if 
+*/
+
+/*# sourceMappingURL=autor.css.map */

@@ -1,0 +1,16 @@
+nav {
+  background-color: cornflowerblue;
+  margin-top: 1px;
+  font-size: 2em;
+  columns: 3;
+  column-rule: solid white 1px;
+  text-align: center;
+  li {
+    list-style: none;
+    padding: 8px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

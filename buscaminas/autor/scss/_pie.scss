@@ -1,0 +1,17 @@
+footer {
+  position: relative;
+  background-color: cornflowerblue;
+  column-count: 5;
+  margin: 2% 0%;
+  color: white;
+  p {
+    text-align: center;
+    font-style: italic;
+    margin: 4% auto;
+  }
+  p img {
+    width: 50px;
+    height: 50px;
+    padding-top: 8%;
+  }
+}

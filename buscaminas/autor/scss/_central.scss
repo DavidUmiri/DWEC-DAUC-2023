@@ -1,9 +1,11 @@
 article {
+  color: white;
   display: inline-block;
   text-align: center;
   width: 30%;
   margin-left: 35px;
   h2 {
+    color: white;
     text-decoration: underline;
   }
   p {
@@ -17,7 +19,7 @@ main img {
 .fechas {
   border-style: ridge;
   border-width: 3px;
-  border-color: aqua;
+  border-color: aquamarine;
   border-radius: 5px;
   width: fit-content;
   margin: 0 auto;

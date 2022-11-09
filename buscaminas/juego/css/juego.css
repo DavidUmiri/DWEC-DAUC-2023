@@ -1,0 +1,89 @@
+html,
+body {
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+}
+
+header {
+  margin-top: 2%;
+  background-color: cornflowerblue;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+}
+
+nav {
+  background-color: cornflowerblue;
+  margin-top: 1px;
+  font-size: 2em;
+  columns: 3;
+  column-rule: solid white 1px;
+  text-align: center;
+}
+nav li {
+  list-style: none;
+  padding: 8px;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+aside {
+  position: absolute;
+  text-align: center;
+}
+aside.izquierda {
+  top: 0px;
+  height: 564px;
+  width: 564px;
+  background-color: red;
+}
+aside.izquierda img {
+  width: 400px;
+  height: 564px;
+}
+aside.derecha {
+  top: 0px;
+  right: 0px;
+  height: 564px;
+  width: 564px;
+  background-color: blue;
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 2%;
+  background-color: lime;
+  text-align: center;
+}
+table tr {
+  background-color: white;
+}
+table tr td {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  position: relative;
+  background-color: cornflowerblue;
+  column-count: 5;
+  margin: 2% 0%;
+}
+footer p {
+  text-align: center;
+  font-style: italic;
+  margin: 4% auto;
+}
+footer p img {
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+
+/*# sourceMappingURL=juego.css.map */
