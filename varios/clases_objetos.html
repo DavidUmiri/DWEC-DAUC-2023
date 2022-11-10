@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // DEFINIR CLASES Y OBJETOS
+        let agustin = {
+            // PROPIEDADES
+            nombre: "Agustin Valverde",
+            edad: 40,
+            dni: "111111",
+
+            // METODOS
+            cumplirAnos: function (incremento) {
+                this.edad = this.edad + incremento;
+                console.log(this.nombre + " ha cumplido: " + this.edad + " años");
+            },
+
+            informacion: function () {
+                alert(`la informacion es: ${this.nombre}, ${this.edad}, ${this.dni}`);
+            },
+        };
+    </script>
+</body>
+
+</html>

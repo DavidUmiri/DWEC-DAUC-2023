@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* TAMAÑOS DE LETRA */
 html,
 body,
 main {
@@ -11,32 +13,30 @@ header {
   text-align: center;
   padding: 10px;
   margin-top: 2%;
-  font-size: 2em;
+  font-size: 40px;
 }
-header nav a {
-  color: white;
-  text-decoration: none;
+header:hover {
+  color: red;
 }
 
 main {
   background-color: cornflowerblue;
+  text-align: center;
 }
-
-h1 {
+main section h1 {
   color: white;
   text-align: center;
-  padding-top: 50px;
-  margin-bottom: 2%;
-  font-size: 3em;
+  padding-top: 25px;
+  font-size: 40px;
 }
 
 nav {
   background-color: cornflowerblue;
+  text-align: center;
   margin-top: 1px;
-  font-size: 2em;
+  font-size: 20px;
   columns: 3;
   column-rule: solid white 1px;
-  text-align: center;
 }
 nav li {
   list-style: none;
@@ -46,20 +46,21 @@ nav li a {
   color: white;
   text-decoration: none;
 }
+nav a:hover {
+  color: blue;
+}
 
 article {
   color: white;
   display: inline-block;
   text-align: center;
-  width: 30%;
-  margin-left: 35px;
+  width: 626px;
 }
 article h2 {
   color: white;
-  text-decoration: underline;
 }
 article p {
-  padding: 5px 30px;
+  padding: 5px 100px;
 }
 
 main img {
@@ -67,19 +68,10 @@ main img {
   width: 200px;
 }
 
-.fechas {
-  border-style: ridge;
-  border-width: 3px;
-  border-color: aquamarine;
-  border-radius: 5px;
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 4%;
-}
-
 footer {
-  position: relative;
   background-color: cornflowerblue;
+  text-align: center;
+  position: relative;
   column-count: 5;
   margin: 2% 0%;
   color: white;
@@ -87,28 +79,12 @@ footer {
 footer p {
   text-align: center;
   font-style: italic;
-  margin: 4% auto;
+  margin: 5% auto;
 }
 footer p img {
   width: 50px;
   height: 50px;
   padding-top: 8%;
 }
-
-/* 
-main.scss
-    _base_layout.scss (container, *, h1... informacion generica)
-    _menu_sup.scss
-    _menu_lateral.scss
-    _central.scss
-    _pie.scss
-
-Todo codigo sass debe incluir:
-    importar
-    variables - interpolacion
-    mixins / include
-    comentarios
-    if 
-*/
 
 /*# sourceMappingURL=autor.css.map */

@@ -1,13 +1,13 @@
 footer {
+  @include color_alineacion();
   position: relative;
-  background-color: cornflowerblue;
   column-count: 5;
   margin: 2% 0%;
   color: white;
   p {
     text-align: center;
     font-style: italic;
-    margin: 4% auto;
+    margin: 5% auto;
   }
   p img {
     width: 50px;

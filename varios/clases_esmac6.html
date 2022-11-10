@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      class personaClass {
+        constructor(nombre, edad) {
+          this._nombre = nombre;
+          this._edad = edad;
+        }
+        // SE PONE GUION BAJO PARA QUE NO ENTRE EN UN BUCLE
+        get edad() {
+          return this._edad;
+        }
+        set edad(valor) {
+          this._edad = valor;
+        }
+        cumplirAnos(incremento) {
+          this.edad = this.edad + incremento;
+        }
+        imprimirInfo() {
+          document.write("Nombre" + this.nombre);
+        }
+        // LAS FUNCIONES STATIC ESTÁN ASOCIADAS A LAS CLASES
+        static saludar() {
+          console.log("aaaaaaaa");
+        }
+        // AL CONVERTIR UN OBJETO A STRING
+        toString() {
+          return this._edad.toString();
+        }
+        // AL COMPARAR OBJETOS
+        valueOf() {
+          return parseInt(this._edad);
+        }
+      }
+
+      //   document.write(", Edad " + this.edad);
+      //   alert("Enhorabuena esta funcionando la clase Persona");
+      //   var mama = new personaClass("Ana", 67);
+      //   mama.cumplirAnos(1);
+      //   mama.imprimirInfo();
+      //   mama.edad;
+      //   personaClass.confirmacion();
+    </script>
+  </body>
+</html>

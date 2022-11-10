@@ -1,21 +1,4 @@
 @import "_base_layout.scss";
 @import "_menu_sup.scss";
-@import "_menu_lateral.scss";
 @import "_central.scss";
 @import "_pie.scss";
-
-/* 
-main.scss
-    _base_layout.scss (container, *, h1... informacion generica)
-    _menu_sup.scss
-    _menu_lateral.scss
-    _central.scss
-    _pie.scss
-
-Todo codigo sass debe incluir:
-    importar
-    variables - interpolacion
-    mixins / include
-    comentarios
-    if 
-*/

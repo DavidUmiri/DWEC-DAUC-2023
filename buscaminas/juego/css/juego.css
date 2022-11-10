@@ -3,10 +3,6 @@ body {
   box-sizing: border-box;
 }
 
-main {
-  position: relative;
-}
-
 header {
   margin-top: 2%;
   background-color: cornflowerblue;
@@ -14,6 +10,10 @@ header {
   color: white;
   font-size: 2em;
   padding: 10px;
+}
+
+main {
+  position: relative;
 }
 
 nav {
@@ -34,6 +34,7 @@ nav li a {
 }
 
 aside {
+  z-index: -1;
   position: absolute;
   text-align: center;
 }
@@ -41,7 +42,7 @@ aside.izquierda {
   top: 0px;
   height: 564px;
   width: 564px;
-  background-color: red;
+  background-color: white;
 }
 aside.izquierda img {
   width: 400px;
@@ -49,10 +50,15 @@ aside.izquierda img {
 }
 aside.derecha {
   top: 0px;
+  padding-top: 50px;
   right: 0px;
   height: 564px;
   width: 564px;
-  background-color: blue;
+  background-color: white;
+}
+aside.derecha img {
+  width: 350px;
+  height: 400px;
 }
 
 table {

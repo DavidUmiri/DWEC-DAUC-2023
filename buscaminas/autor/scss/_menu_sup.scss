@@ -1,10 +1,9 @@
 nav {
-  background-color: cornflowerblue;
+  @include color_alineacion();
   margin-top: 1px;
-  font-size: 2em;
+  font-size: map-get($letra, mediano);
   columns: 3;
   column-rule: solid white 1px;
-  text-align: center;
   li {
     list-style: none;
     padding: 8px;
@@ -12,5 +11,8 @@ nav {
       color: white;
       text-decoration: none;
     }
+  }
+  a:hover {
+    color: blue;
   }
 }

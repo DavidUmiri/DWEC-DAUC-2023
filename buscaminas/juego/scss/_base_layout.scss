@@ -3,10 +3,6 @@ body {
   box-sizing: border-box;
 }
 
-main {
-  position: relative;
-}
-
 header {
   margin-top: 2%;
   background-color: cornflowerblue;
@@ -14,4 +10,8 @@ header {
   color: white;
   font-size: 2em;
   padding: 10px;
+}
+
+main {
+  position: relative;
 }

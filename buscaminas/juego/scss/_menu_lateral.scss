@@ -1,21 +1,27 @@
 aside {
+  z-index: -1;
   position: absolute;
   text-align: center;
   &.izquierda {
     top: 0px;
     height: 564px;
     width: 564px;
-    background-color: red;
-  }
-  &.izquierda img {
-    width: 400px;
-    height: 564px;
+    background-color: white;
+    img {
+      width: 400px;
+      height: 564px;
+    }
   }
   &.derecha {
     top: 0px;
+    padding-top: 50px;
     right: 0px;
     height: 564px;
     width: 564px;
-    background-color: blue;
+    background-color: white;
+    img {
+      width: 350px;
+      height: 400px;
+    }
   }
 }
