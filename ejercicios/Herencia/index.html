@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/dead-kansas" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      // CLASE PRODUCTOS CON PROPIEDADES Y METODOS TVSAMSUNG
+      class Productos {
+        constructor(nombre, categoria, unidades, precio) {
+          this._nombre = "";
+          this._categoria = "";
+          this._unidades = 0;
+          this._precio = 0;
+        }
+        getNombre() {
+          return this._nombre;
+        }
+        setNombre(valor) {
+          this._nombre = valor;
+        }
+        getCategoria() {
+          return this._categoria;
+        }
+        setCategoria(valor) {
+          this._categoria = valor;
+        }
+        getUnidades() {
+          return this._unidades;
+        }
+        setUnidades(valor) {
+          this._unidades = valor;
+        }
+        getPrecio() {
+          return this._precio;
+        }
+        setPrecio(valor) {
+          this._precio = valor;
+        }
+        getInfo() {
+          return `${this._nombre} (${this._categoria}): ${this._unidades} x ${
+            this._precio
+          }€ = ${this._unidades * this._precio}€`;
+        }
+      }
+
+      let producto_1 = new Productos();
+      producto_1.setNombre("Cuaderno");
+      producto_1.setCategoria("Material");
+      producto_1.setPrecio(2);
+      producto_1.setUnidades(200);
+
+      let producto_2 = new Productos();
+      producto_2.setNombre("Ruedas");
+      producto_2.setCategoria("Vehiculos");
+      producto_2.setPrecio(50);
+      producto_2.setUnidades(100);
+
+      // CLASE TELEVISORES, HEREDA DE PRODUCTOS, NUEVA PROPIEDAD TAMAÑO
+      // GET INFO MUESTRA EL TAMAÑO JUNTO AL NOMBRE
+      class Televisores extends Productos {
+        constructor(nombre, tam) {
+          super(nombre);
+          this._tam = 0;
+        }
+        // obtener
+        getTam() {
+          return this._tam;
+        }
+        // establecer
+        setTam(valor) {
+          this._tam = valor;
+        }
+        getInfo() {
+          return `Nombre: ${this._nombre}, tamaño: ${this._tam} pulgadas`;
+        }
+      }
+
+      let tv_1 = new Televisores();
+      tv_1.setNombre("Samsung");
+      tv_1.setTam(12);
+      tv_1.setCategoria("Televisores");
+      tv_1.setPrecio(700);
+      tv_1.setUnidades(2000);
+    </script>
+  </body>
+</html>

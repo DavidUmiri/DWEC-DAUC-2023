@@ -2,16 +2,17 @@
 $alto: 200px;
 $ancho: 200px;
 
-article {
-  color: white;
+main article {
   display: inline-block;
+  width: min-content;
+  color: white;
   text-align: center;
-  width: 626px;
   h2 {
     color: white;
+    text-decoration: underline;
   }
   p {
-    padding: 5px 100px;
+    padding: 10px 100px;
   }
 }
 main img {

@@ -37,8 +37,6 @@ function borrarTablero() {
   }
 }
 
-// PENDIENTE: 4. Generar el campo de minas
-
 function marcar(evento) {}
 
 function destapar(evento) {}

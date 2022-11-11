@@ -33,38 +33,50 @@ nav li a {
   text-decoration: none;
 }
 
-aside {
+main aside {
   z-index: -1;
   position: absolute;
-  text-align: center;
+  padding-right: 30px;
+  padding-top: 30px;
 }
-aside.izquierda {
+main aside.izquierda {
+  text-align: left;
   top: 0px;
-  height: 564px;
-  width: 564px;
+  height: 500px;
+  width: 500px;
   background-color: white;
 }
-aside.izquierda img {
+main aside.izquierda img {
   width: 400px;
   height: 564px;
 }
-aside.derecha {
+main aside.derecha {
+  padding-top: 100px;
+  text-align: right;
   top: 0px;
-  padding-top: 50px;
   right: 0px;
-  height: 564px;
-  width: 564px;
+  height: 500px;
+  width: 500x;
   background-color: white;
 }
-aside.derecha img {
+main aside.derecha img {
   width: 350px;
   height: 400px;
+}
+
+main:hover img {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+main {
+  overflow: hidden;
 }
 
 table {
   margin: 0 auto;
   margin-top: 2%;
-  background-color: lime;
+  background-color: cornflowerblue;
   text-align: center;
 }
 table tr {

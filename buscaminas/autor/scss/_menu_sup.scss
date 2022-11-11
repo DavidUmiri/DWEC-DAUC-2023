@@ -1,4 +1,5 @@
 nav {
+  z-index: 10;
   @include color_alineacion();
   margin-top: 1px;
   font-size: map-get($letra, mediano);
