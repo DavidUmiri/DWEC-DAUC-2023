@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="idText">Texto a buscar</label>
+      <input type="text" id="idText" />
+
+      <input type="button" onclick="buscar()" value="Enviar" />
+
+      <label for="palabras">Palabras completas</label>
+      <input type="checkbox" id="palabras" value="" />
+
+      <label for="mayusMinus">Distinguir entre mayusculas y minusculas</label>
+      <input type="checkbox" id="mayusMinus" value="" />
+      <br />
+      <p id="resultado"></p>
+      <p id="p1">Este es el texto donde se busca la palabra</p>
+    </form>
+
+    <script>
+      function buscar() {
+        let palabra = document.getElementById("idText").value;
+        let texto = document.getElementById("p1").innerHTML;
+        let index = texto.indexOf(palabra);
+
+        let seleccionado = document.getElementById("palabras").checked; // devuelve true o false
+        let seleccionado2 = document.getElementById("mayusMinus").checked;
+
+        if (seleccionado) {
+          if (index >= 0) {
+            let resultado = "la palabra se encuentra en la posicion " + index;
+            document.getElementById("resultado").innerHTML = resultado;
+          } else {
+            let resultado = "la palabra no se encuentra en el texto";
+            document.getElementById("resultado").innerHTML = resultado;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
