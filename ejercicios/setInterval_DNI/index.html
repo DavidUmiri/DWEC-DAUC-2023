@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // método para la clase String que indica si la cadena se corresponde con un nif para españoles válido o no. 8 cifras y letra mayúscula
+      String.prototype.isNif = function () {
+        return (
+          /^(\d{8})([A-HJ-NP-TV-Z])$/.test(this) &&
+          "TRWAGMYFPDXBNJZSQVHLCKE"[RegExp.$1 % 23] == RegExp.$2
+        );
+      };
+
+      // creo las variables
+      let fin = "-1";
+      let mensaje = prompt("Introduce un DNI, -1 para terminar");
+      id_setInterval = setInterval(mensaje, 2);
+
+      if (mensaje === fin) {
+        console.log("terminado");
+      } else {
+        if (mensaje.isNif()) {
+          console.log(mensaje);
+          clearInterval(id_setInterval);
+        } else {
+          console.log("El DNI es incorrecto");
+          clearInterval(id_setInterval);
+        }
+      }
+    </script>
+  </body>
+</html>
