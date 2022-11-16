@@ -9,13 +9,16 @@
   <body>
     <script>
       // cambiar el titulo a una hora dinamica
-      let date = new Date();
-      let hora = date.getHours();
-      let minutos = date.getMinutes();
-      let segundos = date.getSeconds();
+      function hora_dinamica() {
+        let date = new Date();
+        let hora = date.getHours();
+        let minutos = date.getMinutes();
+        let segundos = date.getSeconds();
 
-      let new_date = "La hora es: " + hora + ":" + minutos + ":" + segundos;
-      document.title = new_date;
+        let new_date = "La hora es: " + hora + ":" + minutos + ":" + segundos;
+        document.title = new_date;
+      }
+      setInterval(hora_dinamica, 1000);
     </script>
   </body>
 </html>
