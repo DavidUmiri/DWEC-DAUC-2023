@@ -1,0 +1,33 @@
+ul {
+  list-style-type: decimal;
+}
+
+ul#lista li {
+  color: #333;
+  padding: 0.2em 0 0.2em 0.5em;
+  text-decoration: none;
+  text-align: left;
+  list-style: none;
+  list-style-type: "\2713";
+}
+
+h1 {
+  color: #6c2eb9;
+  font-weight: normal;
+  font-size: 40px;
+  font-family: Arial;
+  text-transform: uppercase;
+}
+h3 {
+  border: 1px solid #6c2eb9;
+  padding: 4px;
+  border-radius: 10px;
+  float: right;
+}
+h3 span#idImporteTotal {
+  color: red;
+}
+input {
+  border-radius: 5px;
+  border: 1px solid #39c;
+}

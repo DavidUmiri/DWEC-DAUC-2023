@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Agustin.Prf" />
+    <title>Gastos del Viaje</title>
+    <script src="gastos.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="gastos.css" />
+  </head>
+  <body>
+    <!-- EVENTOS, LISTAS, ARRAYS, DOM -->
+    <h1>Gastos del Viaje</h1>
+    <h3>Importe Total : <span id="idImporteTotal"> 536</span> €</h3>
+    <ul id="lista">
+      <li onclick="borrar(this)">hotel : 300</li>
+      <li onclick="borrar(this)">avión : 195</li>
+      <li onclick="borrar(this)">taxi : 41</li>
+    </ul>
+    <input type="text" value="" id="gasto" />
+    <input type="button" value="Añadir" onclick="anadirGasto()" />
+  </body>
+</html>

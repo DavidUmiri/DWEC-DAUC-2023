@@ -3,7 +3,7 @@ const elementos = new Set();
 cargarElementos();
 
 function anadirElemento() {
-  // Comprobar elemento repetido o vacrío
+  // Comprobar elemento repetido o vacío
   let articulo = document.querySelector("#articulo");
 
   if (articulo.value == "" || elementos.has(articulo.value)) {
