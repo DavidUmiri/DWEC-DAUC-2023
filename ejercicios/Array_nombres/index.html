@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let diez_nombres = [];
+
+      // relleno el array
+      for (let i = 0; i < 10; i++) {
+        diez_nombres[i] = prompt(`Introduce el nombre numero ${i}: `);
+      }
+
+      // imprimo por consola el array
+      for (let i = 0; i < 10; i++) {
+        console.log(diez_nombres[i]);
+      }
+
+      console.log(diez_nombres.length); // numero de socios
+      console.log(diez_nombres.sort()); // orden alfabetico
+      console.log(diez_nombres.reverse()); // orden inverso
+    </script>
+  </body>
+</html>

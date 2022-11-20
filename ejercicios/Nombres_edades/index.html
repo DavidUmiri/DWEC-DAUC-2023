@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="mostrar()">Mostrar nombres y edades</button>
+    <button onclick="media()">Mostrar la media de las edades</button>
+    <p id="nombres"></p>
+    <p id="edades"></p>
+
+    <script>
+      let nombres = [];
+      let edades = [];
+
+      // rellenamos el array de nombres
+      for (let i = 0; i < 2; i++) {
+        nombres[i] = prompt("Introduce los nombres");
+      }
+      // rellenamos el array de edades
+      for (let i = 0; i < 2; i++) {
+        edades[i] = prompt("Introduce las edades respectivamente");
+      }
+
+      function mostrar() {
+        for (let i = 0; i < 2; i++) {
+          let nombresHTML = document.getElementById("nombres");
+          nombresHTML.innerHTML = nombres[i];
+        }
+        for (let i = 0; i < 2; i++) {
+          let edadesHTML = document.getElementById("edades");
+          edadesHTML.innerHTML = edades[i];
+        }
+      }
+      function media() {}
+    </script>
+  </body>
+</html>

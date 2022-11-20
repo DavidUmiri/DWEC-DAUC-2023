@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // numero de alumnos, nombre y notas finales
+      //   let numero_alumnos = parseInt(prompt("Introduce el numero de alumnos"));
+      //   let nombres_notas = [[], []];
+
+      //   nombres_notas.push(["nombre1", 5]);
+      //   nombres_notas.push(["nombre2", 7]);
+      //   console.log(nombres_notas);
+
+      let numero_alumnos = parseInt(prompt("Numero de alumnos"));
+      let nombres_notas = new Map();
+      let contador = 0;
+      let suma = 0;
+
+      while (contador < numero_alumnos) {
+        nombres_notas.set(prompt("Nombre"), prompt("Nota"));
+        contador++;
+      }
+
+      for (let [$clave, $valor] of nombres_notas) {
+        console.log($clave + " = " + $valor);
+      }
+
+      // let media = suma / numero_alumnos;
+      // console.log(`La media de las notas es: ${media}`);
+    </script>
+  </body>
+</html>
