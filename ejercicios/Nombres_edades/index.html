@@ -9,33 +9,28 @@
   <body>
     <button onclick="mostrar()">Mostrar nombres y edades</button>
     <button onclick="media()">Mostrar la media de las edades</button>
-    <p id="nombres"></p>
-    <p id="edades"></p>
+
+    <p></p>
 
     <script>
-      let nombres = [];
-      let edades = [];
-
-      // rellenamos el array de nombres
-      for (let i = 0; i < 2; i++) {
-        nombres[i] = prompt("Introduce los nombres");
-      }
-      // rellenamos el array de edades
-      for (let i = 0; i < 2; i++) {
-        edades[i] = prompt("Introduce las edades respectivamente");
-      }
+      let nombres = prompt("Introduce los nombres separados por comas");
+      let nombres_array = nombres.split(",");
+      let edades = prompt("Introduce las edades separadas por comas");
+      let edades_array = edades.split(",");
 
       function mostrar() {
-        for (let i = 0; i < 2; i++) {
-          let nombresHTML = document.getElementById("nombres");
-          nombresHTML.innerHTML = nombres[i];
+        let lista_n = document.getElementsByTagName("p");
+        let lista_e = document.getElementsByTagName("p");
+
+        for (let i = 0; i < nombres_array.length; i++) {
+          console.log(`${nombres_array[i]}`);
+          // pendiente: imprimir en html cuando pulsa mostrar
         }
-        for (let i = 0; i < 2; i++) {
-          let edadesHTML = document.getElementById("edades");
-          edadesHTML.innerHTML = edades[i];
+
+        for (let j = 0; j < nombres_array.length; j++) {
+          console.log(`${edades_array[j]}`);
         }
       }
-      function media() {}
     </script>
   </body>
 </html>

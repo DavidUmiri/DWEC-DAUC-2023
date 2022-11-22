@@ -45,7 +45,6 @@ function anadirElemento() {
 
 function cargarElementos() {
   let items = document.querySelectorAll("#lista li");
-
   items.forEach((e) => elementos.add(e.innerHTML));
 }
 
