@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Año bisiesto.</p>
+    <p>
+      Es bisiesto si es divisible entre cuatro y (no es divisible entre 100 o es
+      divisible entre 400)
+    </p>
+  </body>
+  <script>
+    // let año_introducido = parseInt(prompt("Introduce un año"));
+
+    function es_bisiesto(año) {
+      if ((año % 4 == 0 && año % 100 != 0) || año % 400 == 0) {
+        console.log("Es bisiesto");
+      } else {
+        console.log("No es bisiesto");
+      }
+    }
+  </script>
+</html>

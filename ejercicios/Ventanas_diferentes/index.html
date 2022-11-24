@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <p>
+      Hacer un script que pregunte por el número de socios y pida, una vez por
+      cada socio y en ventanas diferentes, el nombre y la dirección de correo
+      electrónico. Cada vez que lea el dato del correo electrónico, una función
+      deberá comprobar que el dato se corresponde con un dirección e-mail
+      utilizando la función indexOf(). La función deberá devolver el valor true
+      si la dirección tiene una @ y false si no la tiene.En el caso de que sea
+      una dirección electrónica debe almacenar el nombre y la dirección en un
+      elemento de un array y si no debe pedirsela de nuevo hasta que introduzca
+      un dato correcto
+    </p>
+
+    <form name="formulario">
+      <label for="nombre">Nombre:</label>
+      <input name="nombre" type="text" id="nombre" />
+      <label for="email">Email:</label>
+      <input name="email" type="email" id="email" />
+      <br /><br />
+      <input
+        type="button"
+        onclick="abrir_ventana()"
+        value="Abrir ventanas para los socios"
+      />
+      <input
+        type="button"
+        onclick="es_correo()"
+        value="Comprobar si es correo"
+      />
+    </form>
+  </body>
+</html>
