@@ -1,6 +1,14 @@
+$id: "google";
+@if $id {
+  #google:hover {
+    visibility: hidden;
+    transition: 0.5s;
+    transform: rotate(-0.5turn);
+  }
+}
+
 footer {
-  @include color_alineacion();
-  position: relative;
+  @include bc_ta($bc: #2f11c359);
   column-count: 5;
   margin: 2% 0%;
   color: white;

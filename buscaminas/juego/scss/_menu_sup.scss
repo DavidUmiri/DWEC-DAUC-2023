@@ -1,3 +1,33 @@
+// mapa de colores
+$colores: (
+  "inicio": red,
+  "autor": yellow,
+  "como_jugar": green,
+);
+
+/* diferentes colores al pasar por el nav */
+#inicio:hover {
+  color: map-get($colores, "inicio");
+}
+#autor:hover {
+  color: map-get($colores, "autor");
+}
+#como_jugar:hover {
+  color: map-get($colores, "como_jugar");
+}
+
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  margin-top: 2%;
+  background-color: cornflowerblue;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+}
+
 nav {
   background-color: cornflowerblue;
   margin-top: 1px;

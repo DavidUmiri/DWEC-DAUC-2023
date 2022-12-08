@@ -1,41 +1,35 @@
-// MIXIN DE COLORES Y ALINEACION
-@mixin color_alineacion {
-  background-color: cornflowerblue;
+// los comentarios en una sola linea son eliminados cuando Sass es compilado a CSS
+/* los comentarios multi-línea se mantienen */
+
+// mixin color de fondo y alineación centro
+@mixin bc_ta($bc: cornflowerblue) {
+  background-color: $bc;
   text-align: center;
 }
 
-/* TAMAÑOS DE LETRA */
+// mapa tamaño letra
 $letra: (
   "enano": 10px,
   "mediano": 20px,
   "grande": 40px,
+  "gigante": 100px,
 );
 
 html,
 body,
 main {
   box-sizing: border-box;
-}
-
-header {
-  color: white;
-  position: relative;
-  @include color_alineacion();
-  padding: 10px;
-  margin-top: 2%;
-  font-size: map-get($letra, grande);
-  &:hover {
-    color: red;
-  }
+  background-color: cornflowerblue;
 }
 
 main {
-  @include color_alineacion();
+  @include bc_ta();
   section {
     h1 {
       color: white;
       text-align: center;
-      padding-top: 25px;
+      padding-top: 10px;
+      margin-bottom: 0px;
       font-size: map-get($letra, grande);
     }
   }

@@ -1,5 +1,53 @@
+@mixin img_tam() {
+  width: 50px;
+  height: 50px;
+}
+
+$redes_sociales: github facebook google instagram;
+
 footer {
-  position: relative;
+  @each $i in $redes_sociales {
+    ##{$i} {
+      background-image: url("img/#{$i}.webp");
+      @include img_tam();
+      padding-top: 8%;
+    }
+  }
+}
+
+/* 
+Resultado:
+
+footer #github {
+  background-image: url("img/github.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #facebook {
+  background-image: url("img/facebook.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #google {
+  background-image: url("img/google.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #instagram {
+  background-image: url("img/instagram.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+*/
+
+footer {
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
   background-color: cornflowerblue;
   column-count: 5;
   margin: 2% 0%;
@@ -7,10 +55,6 @@ footer {
     text-align: center;
     font-style: italic;
     margin: 4% auto;
-  }
-  p img {
-    width: 50px;
-    height: 50px;
-    padding-top: 8%;
+    color: white;
   }
 }

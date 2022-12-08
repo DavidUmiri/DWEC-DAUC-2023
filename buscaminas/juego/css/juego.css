@@ -1,19 +1,36 @@
+/* permanece */
 html,
 body {
   box-sizing: border-box;
 }
 
+main {
+  position: relative;
+}
+
+/* diferentes colores al pasar por el nav */
+#inicio:hover {
+  color: red;
+}
+
+#autor:hover {
+  color: yellow;
+}
+
+#como_jugar:hover {
+  color: green;
+}
+
 header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
   margin-top: 2%;
   background-color: cornflowerblue;
   text-align: center;
   color: white;
   font-size: 2em;
   padding: 10px;
-}
-
-main {
-  position: relative;
 }
 
 nav {
@@ -64,11 +81,6 @@ main aside.derecha img {
   height: 400px;
 }
 
-main:hover img {
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-}
-
 main {
   overflow: hidden;
 }
@@ -87,8 +99,63 @@ table tr td {
   height: 50px;
 }
 
+footer #github {
+  background-image: url("img/github.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #facebook {
+  background-image: url("img/facebook.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #google {
+  background-image: url("img/google.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #instagram {
+  background-image: url("img/instagram.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+
+/* 
+Resultado:
+
+footer #github {
+  background-image: url("img/github.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #facebook {
+  background-image: url("img/facebook.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #google {
+  background-image: url("img/google.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+footer #instagram {
+  background-image: url("img/instagram.webp");
+  width: 50px;
+  height: 50px;
+  padding-top: 8%;
+}
+*/
 footer {
-  position: relative;
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
   background-color: cornflowerblue;
   column-count: 5;
   margin: 2% 0%;
@@ -97,11 +164,7 @@ footer p {
   text-align: center;
   font-style: italic;
   margin: 4% auto;
-}
-footer p img {
-  width: 50px;
-  height: 50px;
-  padding-top: 8%;
+  color: white;
 }
 
 /*# sourceMappingURL=juego.css.map */

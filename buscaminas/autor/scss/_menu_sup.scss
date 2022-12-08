@@ -1,6 +1,19 @@
+header {
+  @include bc_ta($bc: #2b00ff62);
+  color: white;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 10px;
+  font-size: map-get($letra, grande);
+  &:hover {
+    font-size: map-get($letra, gigante);
+    transition: 1s;
+  }
+}
+
 nav {
-  z-index: 10;
-  @include color_alineacion();
+  @include bc_ta($bc: #5136d97d);
   margin-top: 1px;
   font-size: map-get($letra, mediano);
   columns: 3;
@@ -14,6 +27,7 @@ nav {
     }
   }
   a:hover {
-    color: blue;
+    font-size: map-get($letra, grande);
+    transition: 1s;
   }
 }

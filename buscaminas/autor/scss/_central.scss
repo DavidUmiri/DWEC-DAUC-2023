@@ -1,10 +1,10 @@
-// VARIABLES
+// variables
 $alto: 200px;
 $ancho: 200px;
 
 main article {
   display: inline-block;
-  width: min-content;
+  width: 33%;
   color: white;
   text-align: center;
   h2 {
@@ -15,6 +15,7 @@ main article {
     padding: 10px 100px;
   }
 }
+
 main img {
   height: $alto;
   width: $ancho;
