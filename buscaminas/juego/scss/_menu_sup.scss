@@ -1,4 +1,12 @@
 // mapa de colores
+//// @access public
+//// @author David Umiri
+
+/// @group mapas
+/// @parameter {color} "inicio" - Modifica el color a rojo al pasar por inicio
+/// @parameter {color} "autor" - Modifica el color a amarillo al pasar por autor
+/// @parameter {color} "como_jugar" - Modifica el color a amarillo al pasar por como_jugar
+
 $colores: (
   "inicio": red,
   "autor": yellow,

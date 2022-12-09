@@ -1,4 +1,11 @@
-// función para calcular el tamaño de la celda
+//// @access public
+//// @author David Umiri
+
+/// @group funciones
+/// @parameter {parámetro 1} $longitudTotal - Tamaño de la tabla
+/// @parameter {parámetro 2} $numElementos - Cantidad de celdas
+/// @return {calc}
+
 @function calcularTamanio($longitudTotal, $numElementos) {
   @return calc($longitudTotal/ $numElementos);
 }

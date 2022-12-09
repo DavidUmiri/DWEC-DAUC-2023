@@ -1,7 +1,20 @@
+// mapa de colores
+//// @access public
+//// @author David Umiri
+
+/// @group mixin
+/// @parameter {width, height} ancho_alto Establece un tamaño para las imágenes
+
 @mixin img_tam() {
   width: 50px;
   height: 50px;
 }
+
+//// @access public
+//// @author David Umiri
+
+/// @group forEach
+/// @parameter {img} imágenes Establecemos las rutas de las imágenes
 
 $redes_sociales: github facebook google instagram;
 

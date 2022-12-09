@@ -2,12 +2,17 @@
 /* los comentarios multi-línea se mantienen */
 
 // mixin color de fondo y alineación centro
+//// @access public
+///  @author David Umiri
+
+/// Mixin para color de fondo y texto alineado
+/// @parameter {color} $bc -- Color del fondo
 @mixin bc_ta($bc: cornflowerblue) {
   background-color: $bc;
   text-align: center;
 }
 
-// mapa tamaño letra
+/// Mapa para diferentes tamaños de letras
 $letra: (
   "enano": 10px,
   "mediano": 20px,

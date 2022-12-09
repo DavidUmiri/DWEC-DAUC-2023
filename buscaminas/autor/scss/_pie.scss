@@ -1,7 +1,8 @@
+/// Condición que comprueba que si el id es google haga una pequeña rotación
 $id: "google";
 @if $id {
   #google:hover {
-    visibility: hidden;
+    // visibility: hidden;
     transition: 0.5s;
     transform: rotate(-0.5turn);
   }
