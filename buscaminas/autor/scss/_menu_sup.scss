@@ -1,3 +1,4 @@
+/// Incluimos los mixins bc_ta
 header {
   @include bc_ta($bc: #2b00ff62);
   color: white;
@@ -11,7 +12,7 @@ header {
     transition: 1s;
   }
 }
-
+/// Hacemos uso del mapa de letras
 nav {
   @include bc_ta($bc: #5136d97d);
   margin-top: 1px;
