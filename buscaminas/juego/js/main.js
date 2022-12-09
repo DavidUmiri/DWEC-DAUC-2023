@@ -13,7 +13,7 @@ function generartablero() {
   for (let i = 0; i < buscaminas.TAM_MAX; i++) {
     tablero[i] = new Array(buscaminas.TAM_MAX);
     tablero_recursivo[i] = new Array(buscaminas.TAM_MAX);
-    // recorremos las columnas y establecemos el valor de cero
+    // recorremos las columnas y en cada posición establecemos el valor de cero
     for (let j = 0; j < buscaminas.TAM_MAX; j++) {
       tablero[i][j] = 0;
       tablero_recursivo[i][j] = 0;
@@ -42,6 +42,7 @@ function colocarbombas() {
     }
   }
 }
+
 // generartablero()
 // colocarbombas()
 //document.write(tablero);
