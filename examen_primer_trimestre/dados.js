@@ -165,28 +165,41 @@ function comprobarGanador() {
   //// UBICACIÓN MUY MUY IMPORTANTE!!!!!1
   ////
   gestionJugadores();
-  let nueva_partida = new Partida();
+  gestionResultados();
+  // let nueva_partida = new Partida();
+  let partidaActual = new Partida(1, nombre_j1, nombre_j2, puntos_j1, puntos_j2);
 }
 
 /********************************************************
  *  APARTADO 1 : Implementar reloj del juego
  *******************************************************/
 
-reloj();
+// reloj();
 
-function reloj() {
+// function reloj() {
+//   let fecha = new Date();
+
+//   let hora = fecha.getHours();
+//   let minutos = fecha.getMinutes();
+//   let segundos = fecha.getSeconds();
+
+//   let fecha_actual = `${hora}:${minutos}:${segundos}`;
+//   // console.log(fecha_actual);
+//   let div_reloj = document.getElementById("idReloj");
+//   div_reloj.innerHTML = fecha_actual;
+//   setTimeout(reloj, 1000);
+// }
+
+function reloj2() {
   let fecha = new Date();
-
   let hora = fecha.getHours();
   let minutos = fecha.getMinutes();
   let segundos = fecha.getSeconds();
-
   let fecha_actual = `${hora}:${minutos}:${segundos}`;
-  // console.log(fecha_actual);
   let div_reloj = document.getElementById("idReloj");
   div_reloj.innerHTML = fecha_actual;
-  setTimeout(reloj, 1000);
 }
+setInterval(reloj2, 1000);
 
 /********************************************************
  *  APARTADO 2 : Definir función para número aleatorio.
@@ -194,7 +207,8 @@ function reloj() {
 
 function generarNumeroAleatorio() {
   // hacer un return con un valor entero aleatorio entre el 1 y el 6
-  let numero_aleatorio = parseInt(Math.random() * 6) + 1;
+  // let numero_aleatorio = parseInt(Math.random() * 6) + 1;
+  let numero_aleatorio = Math.ceil(Math.random() * 6);
   // console.log(numero_aleatorio);
   return numero_aleatorio;
 }
@@ -203,17 +217,30 @@ function generarNumeroAleatorio() {
  *  APARTADO 3 : Gestión de jugadores
  *************************************************************/
 
-function gestionJugadores() {
-  // console.log(nombre_j1);
-  let jugadores = new Set();
+// MAL
+// function gestionJugadores() {
+//   // console.log(nombre_j1);
+//   let jugadores = new Set();
+//   jugadores.add(nombre_j1);
+//   jugadores.add(nombre_j2);
+//   let lista_jugadores = document.getElementById("idListadoJugadores");
+//   let jugadores_html = document.querySelector("#idNombreJugadores");
+//   // lista_jugadores.innerHTML = "prueba";
+//   // jugadores.forEach((e)=>console.log(e));
+//   jugadores.forEach((e) => (jugadores_html.innerHTML = e));
+//   lista_jugadores.appendChild(jugadores_html);
+// }
+
+// BIEN
+let jugadores = new Set();
+
+function gestionJugadores2() {
   jugadores.add(nombre_j1);
   jugadores.add(nombre_j2);
-  let lista_jugadores = document.getElementById("idListadoJugadores");
-  let jugadores_html = document.querySelector("#idNombreJugadores");
-  // lista_jugadores.innerHTML = "prueba";
-  // jugadores.forEach((e)=>console.log(e));
-  jugadores.forEach((e) => (jugadores_html.innerHTML = e));
-  lista_jugadores.appendChild(jugadores_html);
+  document.getElementById("idNombreJugadores").innerHTML = "";
+  jugadores.forEach(element => {
+    document.getElementById("idNombreJugadores").innerHTML += `${element}`
+  });
 }
 
 /*************************************************************
@@ -221,13 +248,6 @@ function gestionJugadores() {
  *************************************************************/
 
 class Partida {
-  numero_partida;
-  nombre_j1;
-  nombre_j2;
-  puntos_j1;
-  puntos_j2;
-  nombre_ganador;
-  nombre_perdedor;
 
   constructor(
     numero_partida,
@@ -246,31 +266,29 @@ class Partida {
     this._nombre_ganador = nombre_ganador;
     this._nombre_perdedor = nombre_perdedor;
   }
-  getPuntos_j1() {
+  get puntos_j1() {
     return this._puntos_j1;
   }
-  setPuntos_j1(valor) {
+  set puntos_j1(valor) {
     this._puntos_j1 = valor;
   }
-  getPuntos_j2() {
+  get puntos_j2() {
     return this._puntos_j2;
   }
-  setPuntos_j2(valor) {
+  set puntos_j2(valor) {
     this._puntos_j1 = valor;
   }
   static info() {
     return console.log(`Este juego ha sido creado por: David`);
   }
   toString() {
-    return `Partida entre ${nombre_j1} y ${nombre_j2}`;
+    return `Partida entre ${this._nombre_j1} y ${this._nombre_j2}`;
   }
   valueOf() {
-    if (comprobarGanador == nombre_j1) {
-      return puntos_j1;
-    } else if (comprobarGanador == nombre_j2) {
-      return puntos_j2;
+    if (puntos_j1 > puntos_j2) {
+      return parseInt(puntos_j1);
     } else {
-      return 0;
+      return parseInt(puntos_j2);
     }
   }
 }
@@ -279,22 +297,47 @@ class Partida {
  *  APARTADO 5 : Gestión de resultados
  *******************************************************/
 
-let resultado = new Array();
-resultado = [0, "nombre_j1", "ganador"];
+// let resultado = new Array();
+// resultado = [0, "nombre_j1", "ganador"];
 
-let tabla_resultados = document.querySelector("#idEstadisticas");
+// let tabla_resultados = document.querySelector("#idEstadisticas");
 
-let nuevo_tr = document.createElement("tr");
-nuevo_tr.setAttribute("class", "mostrar");
-nuevo_tr.setAttribute("onclick", "borrar(this)");
-let nuevo_td = document.createElement("td");
+// let nuevo_tr = document.createElement("tr");
+// nuevo_tr.setAttribute("class", "mostrar");
+// nuevo_tr.setAttribute("onclick", "borrar(this)");
+// let nuevo_td = document.createElement("td");
 
-for (i of resultado) {
-  nuevo_td.innerHTML = resultado[i];
-  nuevo_tr.appendChild(nuevo_td);
-  tabla_resultados.appendChild(nuevo_tr);
+// for (i of resultado) {
+//   nuevo_td.innerHTML = resultado[i];
+//   nuevo_tr.appendChild(nuevo_td);
+//   tabla_resultados.appendChild(nuevo_tr);
+// }
+
+// function borrar(elemento) {
+//   elemento.remove();
+// }
+
+function gestionResultados(puntos_j1, puntos_j2, ganador, perdedor) {
+  let puntos = puntos_j1 + "-" + puntos_j2
+  console.log(puntos);
+
+  let tabla = document.getElementById("idEstadisticas")
+  let resultados = [puntos, ganador, perdedor];
+  let tablaBorrada = document.getElementById("idEstadisticas").children;
+
+  if (puntos != 0 && ganador && perdedor) {
+    let tr = document.createElement("tr");
+    resultados.forEach(e => {
+      tr.setAttribute("onclick", "borrar(this)");
+      tr.classList.add("mostrar");
+      let td = document.createElement("td");
+      td.innerHTML = e;
+      tr.appendChild(td);
+    });
+    tabla.appendChild(tr);
+  }
 }
 
-function borrar(elemento) {
-  elemento.remove();
+function borrar(elementoTr) {
+  return elementoTr.remove();
 }
