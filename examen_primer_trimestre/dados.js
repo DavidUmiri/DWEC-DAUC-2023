@@ -174,32 +174,30 @@ function comprobarGanador() {
  *  APARTADO 1 : Implementar reloj del juego
  *******************************************************/
 
-// reloj();
+reloj();
 
-// function reloj() {
-//   let fecha = new Date();
-
-//   let hora = fecha.getHours();
-//   let minutos = fecha.getMinutes();
-//   let segundos = fecha.getSeconds();
-
-//   let fecha_actual = `${hora}:${minutos}:${segundos}`;
-//   // console.log(fecha_actual);
-//   let div_reloj = document.getElementById("idReloj");
-//   div_reloj.innerHTML = fecha_actual;
-//   setTimeout(reloj, 1000);
-// }
-
-function reloj2() {
+function reloj() {
   let fecha = new Date();
   let hora = fecha.getHours();
   let minutos = fecha.getMinutes();
   let segundos = fecha.getSeconds();
   let fecha_actual = `${hora}:${minutos}:${segundos}`;
+  // console.log(fecha_actual);
   let div_reloj = document.getElementById("idReloj");
   div_reloj.innerHTML = fecha_actual;
+  setTimeout(reloj, 1000);
 }
-setInterval(reloj2, 1000);
+
+// function reloj2() {
+//   let fecha = new Date();
+//   let hora = fecha.getHours();
+//   let minutos = fecha.getMinutes();
+//   let segundos = fecha.getSeconds();
+//   let fecha_actual = `${hora}:${minutos}:${segundos}`;
+//   let div_reloj = document.getElementById("idReloj");
+//   div_reloj.innerHTML = fecha_actual;
+// }
+// setInterval(reloj2, 1000);
 
 /********************************************************
  *  APARTADO 2 : Definir función para número aleatorio.
