@@ -215,7 +215,6 @@ function generarNumeroAleatorio() {
  *  APARTADO 3 : Gestión de jugadores
  *************************************************************/
 
-// MAL
 // function gestionJugadores() {
 //   // console.log(nombre_j1);
 //   let jugadores = new Set();
@@ -229,7 +228,6 @@ function generarNumeroAleatorio() {
 //   lista_jugadores.appendChild(jugadores_html);
 // }
 
-// BIEN
 let jugadores = new Set();
 
 function gestionJugadores2() {
@@ -246,7 +244,6 @@ function gestionJugadores2() {
  *************************************************************/
 
 class Partida {
-
   constructor(
     numero_partida,
     nombre_j1,
@@ -294,26 +291,6 @@ class Partida {
 /********************************************************
  *  APARTADO 5 : Gestión de resultados
  *******************************************************/
-
-// let resultado = new Array();
-// resultado = [0, "nombre_j1", "ganador"];
-
-// let tabla_resultados = document.querySelector("#idEstadisticas");
-
-// let nuevo_tr = document.createElement("tr");
-// nuevo_tr.setAttribute("class", "mostrar");
-// nuevo_tr.setAttribute("onclick", "borrar(this)");
-// let nuevo_td = document.createElement("td");
-
-// for (i of resultado) {
-//   nuevo_td.innerHTML = resultado[i];
-//   nuevo_tr.appendChild(nuevo_td);
-//   tabla_resultados.appendChild(nuevo_tr);
-// }
-
-// function borrar(elemento) {
-//   elemento.remove();
-// }
 
 function gestionResultados(puntos_j1, puntos_j2, ganador, perdedor) {
   let puntos = puntos_j1 + "-" + puntos_j2
