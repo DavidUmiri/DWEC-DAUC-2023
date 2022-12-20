@@ -2,7 +2,7 @@ let tablero = [];
 let tablero_recursivo = [];
 // const TAM_MAX = 10;
 
-// mapa de configuración
+// objeto de configuración --> cambiar a map
 const buscaminas = {
   "TAM_MAX": 10,
   "NUM_BOMBAS": 50
