@@ -162,7 +162,7 @@ function comprobarGanador() {
   }
 
   ////
-  //// UBICACIÓN MUY MUY IMPORTANTE!!!!!1
+  //// UBICACIÓN MUY MUY IMPORTANTE!!!!!
   ////
   gestionJugadores();
   gestionResultados();
