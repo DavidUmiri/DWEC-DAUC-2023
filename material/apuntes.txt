@@ -1,0 +1,26 @@
+// clase
+
+let nombre = document.forms["idFormulario"].elements["idNombre"]
+nombre.checkValidity() --> true --> si pasa la validación
+nombre.validity --> propiedades
+nombre.validationMessage --> devuelve el mensaje por defecto
+modificar ese mensaje --> nombre.setCustomValidity("error")
+nombre.validationMessage --> devuelve el mensaje
+
+// funciones
+
+checkValidity() --> nos dice si el campo al que se aplica es o no válido
+
+validationMessage --> texto del error de validación
+
+validity:
+	valueMissing -->  valdrá true si el campo
+tiene el atributo required pero no se ha introducido nada en él
+	typeMismatch --> indica si el contenido del campo no cumple con su atributo type
+	patternMismatch --> indica si no se cumple con el pattern indicado
+	tooShort / tooLong --> indica si no se cumple el atributo minlength/maxlength
+	rangeUnderflow / rangeOverflow --> indica si no se cumple el atributo min / max
+	stepMismatch --> indica si no se cumple el atributo step del campo 
+	customError --> indica al campo se le ha puesto un error personalizado con setCustomValidity
+	valid --> indica si este campo es válido 
+
