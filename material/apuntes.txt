@@ -7,15 +7,15 @@ nombre.validationMessage --> devuelve el mensaje por defecto
 modificar ese mensaje --> nombre.setCustomValidity("error")
 nombre.validationMessage --> devuelve el mensaje
 
-// funciones
+// funciones validación
 
 checkValidity() --> nos dice si el campo al que se aplica es o no válido
 
 validationMessage --> texto del error de validación
 
 validity:
-	valueMissing -->  valdrá true si el campo
-tiene el atributo required pero no se ha introducido nada en él
+
+	valueMissing -->  valdrá true si el campo tiene el atributo required pero no se ha introducido nada en él
 	typeMismatch --> indica si el contenido del campo no cumple con su atributo type
 	patternMismatch --> indica si no se cumple con el pattern indicado
 	tooShort / tooLong --> indica si no se cumple el atributo minlength/maxlength
@@ -24,3 +24,9 @@ tiene el atributo required pero no se ha introducido nada en él
 	customError --> indica al campo se le ha puesto un error personalizado con setCustomValidity
 	valid --> indica si este campo es válido 
 
+// clase
+
+let map = new Map();
+map.set("Clave", ["Valor1","Valor2","Valor3"])
+map.set("Andalucia", ["Granada","Almeria","Cadiz"])
+map.set("Madrid", ["Vallecas","Elipa","Mostoles"])
