@@ -1,3 +1,16 @@
+// mapas
+
+let map = new Map();
+map.set("Clave", ["Valor1","Valor2","Valor3"])
+map.set("Andalucia", ["Granada","Almeria","Cadiz"])
+map.set("Madrid", ["Vallecas","Elipa","Mostoles"])
+
+// formularios
+
+acceder a text --> elemento.value
+radio button --> se agrupan con un name común --> atributo value y checked (true si está seleccionado)
+select --> atributo options --> atributo selectIndex --> -1 si no está seleccionada
+
 // formularios validación
 
 let nombre = document.forms["idFormulario"].elements["idNombre"]
@@ -22,20 +35,7 @@ validity:
 	rangeUnderflow / rangeOverflow --> indica si no se cumple el atributo min / max
 	stepMismatch --> indica si no se cumple el atributo step del campo 
 	customError --> indica al campo se le ha puesto un error personalizado con setCustomValidity
-	valid --> indica si este campo es válido 
-
-// mapas
-
-let map = new Map();
-map.set("Clave", ["Valor1","Valor2","Valor3"])
-map.set("Andalucia", ["Granada","Almeria","Cadiz"])
-map.set("Madrid", ["Vallecas","Elipa","Mostoles"])
-
-// formularios
-
-acceder a text --> elemento.value
-radio button --> se agrupan con un name común --> atributo value y checked (true si está seleccionado)
-select --> atributo options --> atributo selectIndex --> -1 si no está seleccionada
+	valid --> indica si este campo es válido
 
 // vuejs
 
