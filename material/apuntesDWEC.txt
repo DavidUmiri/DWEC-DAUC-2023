@@ -1,4 +1,4 @@
-// clase
+// formularios validación
 
 let nombre = document.forms["idFormulario"].elements["idNombre"]
 nombre.checkValidity() --> true --> si pasa la validación
@@ -24,9 +24,50 @@ validity:
 	customError --> indica al campo se le ha puesto un error personalizado con setCustomValidity
 	valid --> indica si este campo es válido 
 
-// clase
+// mapas
 
 let map = new Map();
 map.set("Clave", ["Valor1","Valor2","Valor3"])
 map.set("Andalucia", ["Granada","Almeria","Cadiz"])
 map.set("Madrid", ["Vallecas","Elipa","Mostoles"])
+
+// formularios
+
+acceder a text --> elemento.value
+radio button --> se agrupan con un name común --> atributo value y checked (true si está seleccionado)
+select --> atributo options --> atributo selectIndex --> -1 si no está seleccionada
+
+// vuejs
+
+exámen --> formularios y vuejs
+
+página web que usaremos en el exámen --> https://agustinprf.github.io/dwec/
+
+estilos de api --> options api y composition api
+
+nosotros vamos a usar --> Composition API (VUE 3)
+
+Composition API --> mejora la reutilización de código y su organización por funcionalidades
+
+documentación oficial --> https://vuejs.org/guide/introduction.html
+
+15 píldoras --> https://vuejs.org/tutorial/#step-1
+
+ejemplos --> https://vuejs.org/examples/#hello-world
+
+entorno -->
+	sudo apt-get install nodejs npm 
+	node -v
+	npm -version
+
+comandos --> 
+	npm init vue@latest
+	cd <nombre-proyecto>
+	npm install
+	npm run dev
+
+en la carpeta -->
+	npm install
+
+para levantar el servidor -->
+	npm run dev
