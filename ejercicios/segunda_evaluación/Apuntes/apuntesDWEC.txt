@@ -1,0 +1,28 @@
+// clase
+
+exámen --> formularios y vuejs
+
+página web que usaremos en el exámen --> https://agustinprf.github.io/dwec/
+
+estilos de api --> options api y composition api
+
+nosotros vamos a usar --> Composition API (VUE 3)
+
+Composition API --> mejora la reutilización de código y su organización por funcionalidades
+
+documentación oficial --> https://vuejs.org/guide/introduction.html
+
+15 píldoras --> https://vuejs.org/tutorial/#step-1
+
+ejemplos --> https://vuejs.org/examples/#hello-world
+
+entorno -->
+	sudo apt-get install nodejs npm 
+	node -v
+	npm -version
+
+comandos --> 
+	npm init vue@latest
+	cd <nombre-proyecto>
+	npm install
+	npm run dev
