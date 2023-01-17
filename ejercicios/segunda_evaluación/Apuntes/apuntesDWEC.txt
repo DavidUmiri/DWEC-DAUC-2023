@@ -26,3 +26,9 @@ comandos -->
 	cd <nombre-proyecto>
 	npm install
 	npm run dev
+
+en la carpeta -->
+	npm install
+
+para levantar el servidor -->
+	npm run dev
