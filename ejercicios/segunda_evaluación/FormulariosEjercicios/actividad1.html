@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                Introduce tu nombre
+                <input type="text">
+            </p>
+            <p>
+                Mensaje <br>
+                <textarea name="" id="" cols="70" rows="10"></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            Elige un color: <br>
+            Rojo <input type="radio" name="dia"> <br>
+            Verde <input type="radio" name="dia"> <br>
+            Azul <input type="radio" name="dia"> <br>
+            Oscuro <input type="radio" name="dia">
+        </p>
+
+        <p>
+            Selecciona una asignatura
+            <select>
+                <option value="">DWES</option>
+                <option value="">DWEC</option>
+                <option value="">DAW</option>
+                <option value="">DIW</option>
+            </select>
+        </p>
+
+        <p>
+            <select name="combo" multiple>
+                <optgroup label="Opciones básicas">
+                    <option value="1" label="Opcion 1"> </option>
+                </optgroup>
+
+                <optgroup label="Opciones avanzadas">
+                    <option value="2" label="Opcion 2"> </option>
+                    <option value="3" label="Opcion 3"> </option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            Selecciona los dias con disponibilidad<br>
+            <input type="checkbox"> Lunes <br>
+            <input type="checkbox"> Martes <br>
+            <input type="checkbox"> Miercoles <br>
+            <input type="checkbox"> Jueves <br>
+            <input type="checkbox"> Viernes
+        </p>
+
+        <p>
+            Selecciona el dia preferente
+            <input type="text" list="items" />
+            <datalist id="items">
+                <option>Lunes</option>
+                <option>Miercoles</option>
+                <option> Viernes</option>
+            </datalist>
+        </p>
+
+        <p>
+            <input type="submit" value="Haz clic para enviar la informacion">
+            <input type="button" value="Comenzar a rellenar de nuevo">
+            <input type="button" value="Haz clic sobre mi">
+        </p>
+
+    </form>
+
+</body>
+
+</html>
