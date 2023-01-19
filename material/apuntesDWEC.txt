@@ -49,11 +49,14 @@ nosotros vamos a usar --> Composition API (VUE 3)
 
 Composition API --> mejora la reutilización de código y su organización por funcionalidades
 
-documentación oficial --> https://vuejs.org/guide/introduction.html
+documentación oficial --> 
+	https://vuejs.org/guide/introduction.html
 
-15 píldoras --> https://vuejs.org/tutorial/#step-1
+15 píldoras --> 
+	https://vuejs.org/tutorial/#step-1
 
-ejemplos --> https://vuejs.org/examples/#hello-world
+ejemplos --> 
+	https://vuejs.org/examples/#hello-world
 
 entorno -->
 	sudo apt-get install nodejs npm 
@@ -61,13 +64,11 @@ entorno -->
 	npm -version
 
 comandos --> 
-	npm init vue@latest
-	cd <nombre-proyecto>
-	npm install
-	npm run dev
+	npm init vue@latest --> marcar las dos últimas --> yes
 
 en la carpeta -->
 	npm install
 
 para levantar el servidor -->
 	npm run dev
+
