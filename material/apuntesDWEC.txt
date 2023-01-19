@@ -64,11 +64,22 @@ entorno -->
 	npm -version
 
 comandos --> 
-	npm init vue@latest --> marcar las dos últimas --> yes
+	npm init vue@latest
 
 en la carpeta -->
 	npm install
 
 para levantar el servidor -->
 	npm run dev
+
+servidor --> 
+	➜  Local:   http://127.0.0.1:5173/
+  	➜  Network: use --host to expose
+  	➜  press h to show help
+
+Shortcuts --> atajos
+	press r to restart the server
+	press u to show server url
+	press o to open in browser
+	press q to quit
 
