@@ -41,7 +41,8 @@ validity:
 
 exámen --> formularios y vuejs
 
-página web que usaremos en el exámen --> https://agustinprf.github.io/dwec/
+página web que usaremos en el exámen --> 
+	https://agustinprf.github.io/dwec/
 
 estilos de api --> options api y composition api
 
