@@ -131,4 +131,3 @@ REACTIVE
 
 // para vincular un atributo a un valor dinámico, usamos la directiva v-bind
 <div v-bind:id="dynamicId"></div>
-
