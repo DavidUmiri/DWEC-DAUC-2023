@@ -84,4 +84,49 @@ Shortcuts --> atajos
 	press o to open in browser
 	press q to quit
 
-// 
+// componentes
+
+<template></template>
+
+<script></script>
+
+<style lang="scss"></style>
+
+// parámetros
+
+<script setup>
+    defineProps({
+        parametro: {
+            type: String,
+            required: true
+        }
+    })
+</script>
+
+<template>
+    <h1> {{ parametro }} </h1>
+</template>
+
+// 15 PÍLDORAS
+
+ref --> para elementos simples
+
+reactive --> para objetos
+
+// variables a utillizar en el template
+const contador = reactive({ contador: 0 })
+const mensaje = ref('Hello World!')
+
+// variables internas que no utilizare en el template
+const autor = null
+console.log(mensaje.value);
+console.log(contador.cuenta);
+
+REF
+	Elementos simples
+	value
+
+REACTIVE
+	Object
+	value NO
+
