@@ -110,7 +110,6 @@ Shortcuts --> atajos
 // 15 PÍLDORAS
 
 ref --> para elementos simples
-
 reactive --> para objetos
 
 // variables a utillizar en el template
@@ -129,4 +128,7 @@ REF
 REACTIVE
 	Object
 	value NO
+
+// para vincular un atributo a un valor dinámico, usamos la directiva v-bind
+<div v-bind:id="dynamicId"></div>
 

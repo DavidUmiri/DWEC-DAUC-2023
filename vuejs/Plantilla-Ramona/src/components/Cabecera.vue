@@ -13,7 +13,6 @@ defineProps({
 })
 
 
-
 //Variable General, interna del módulo.
 const nombre = ref("Agustin")
 
