@@ -1,5 +1,7 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref } from 'vue' // para utilizar completamente la reactividad
+
+// definimos unas propiedades
 defineProps({
   titulo: {
     type: String,
@@ -10,6 +12,9 @@ defineProps({
     required: true
   }
 })
+
+// *******************************************************
+// *******************************************************
 
 // JS ASOCIADO AL PUNTO 1, 2
 // variables a utillizar en el template
@@ -23,15 +28,10 @@ console.log(contador.cuenta);
 
 // JS ASOCIADO AL PUNTO 3
 let claseTitulo = ref("titulo")
-let claseTitulo2 = ref("titulo2")
 
 setInterval(() => {
-  (claseTitulo.value == "titulo2") ? claseTitulo.value = "titulo" : claseTitulo.value = "titulo2"
-}, 2000)
-
-setInterval(() => {
-  (claseTitulo2.value == "titulo") ? claseTitulo2.value = "titulo2" : claseTitulo2.value = "titulo"
-}, 2000)
+  (claseTitulo.value == "titulo2") ? claseTitulo.value = "titulo" : claseTitulo.value = "titulo2";
+}, 1000)
 
 // JS ASOCIADO AL PUNTO 4 
 const contadorP4 = ref(0)
@@ -56,21 +56,29 @@ function estado() {
 
 // JS ASOCIADO AL PUNTO 7
 let id = 0
-
 const newTodo = ref('')
 
 const todos = ref([
-  { id: id++, text: 'Tender la ropa' },
-  { id: id++, text: 'Hacer los deberes' },
-  { id: id++, text: 'Ver una pelicula' }
+  { id: id++, text: 'Limones' },
+  { id: id++, text: 'Fresas' },
+  { id: id++, text: 'Cerezas' },
+  { id: id++, text: 'Peras' }
 ])
+
+const textoInput = "Especifica un valor";
 
 function addTodo() {
   if (newTodo.value != "") {
-    todos.value.push({ id: id++, text: newTodo.value })
-    newTodo.value = ''
+    if (todos.value.find(e => e.text.toLowerCase() === newTodo.value.toLowerCase())) {
+      newTodo.value = ''
+      console.log("repetido");
+    } else {
+      todos.value.push({ id: id++, text: newTodo.value })
+      newTodo.value = ''
+      console.log("insertado");
+    }
   } else {
-    console.log("tarea vacia");
+    console.log("Tarea vacia");
   }
 }
 
@@ -89,6 +97,9 @@ function removeTodo(todo) {
 
 </script>
 
+<!-- ******************************************************* -->
+<!-- ******************************************************* -->
+
 <template>
 
   <h1>Punto 1</h1>
@@ -103,9 +114,8 @@ function removeTodo(todo) {
 
   <hr>
   <h1>Punto 3</h1>
-  <h2>Attribute Bindings</h2>
-  <h1 :class="claseTitulo">Balón</h1>
-  <h1 :class="claseTitulo2">Pelota</h1>
+  <h2>Attribute Bindings / Enlaces de atributo</h2>
+  <h1 :class="claseTitulo">{{ claseTitulo }}</h1>
 
   <hr>
   <h1>Punto 4</h1>
@@ -130,13 +140,15 @@ function removeTodo(todo) {
   <h1>Punto 7</h1>
   <h2>List Rendering / Representación de lista</h2>
   <form @submit.prevent="addTodo">
-    <input v-model="newTodo">
+    <input v-model="newTodo" :placeholder="textoInput">
+    {{ newTodo }}
     <button>Añadir</button>
   </form>
+
   <ul>
     <li v-for="todo in todos" :key="todo.id">
       {{ todo.text }}
-      <button @click="removeTodo(todo)">X</button>
+      <button @click="removeTodo(todo)">❌</button>
     </li>
   </ul>
 
@@ -173,6 +185,9 @@ function removeTodo(todo) {
   <h2></h2>
 
 </template>
+
+<!-- ******************************************************* -->
+<!-- ******************************************************* -->
 
 <style scoped>
 .titulo {
