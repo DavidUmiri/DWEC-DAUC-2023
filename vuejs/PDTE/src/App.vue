@@ -5,16 +5,16 @@ import { ref } from 'vue'
 
 <template>
   <header>
-    <barraMenu titulo="Menú Principal" :links="['inicio', 'listar']" />
+    <barraMenu titulo="Menú Principal" :links="['inicio', 'listar', 'autor', 'lorem']" />
   </header>
 
   <hr />
 
-  <p>aaaaaaaaaaaaaaa</p>
+  <p>APP</p>
   <main>
     <RouterView />
   </main>
-  <p>fasdfasdfasdfasdfasdfa</p>
+  <p>FIN</p>
 </template>
 
 <style>
