@@ -154,7 +154,8 @@ function removeTodo(todo) {
 
   <hr>
   <h1>Punto 8</h1>
-  <h2></h2>
+  <h2>Computed Property / Propiedad calculada</h2>
+
 
   <hr>
   <h1>Punto 9</h1>

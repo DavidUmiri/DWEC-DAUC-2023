@@ -131,3 +131,9 @@ REACTIVE
 
 // para vincular un atributo a un valor dinámico, usamos la directiva v-bind
 <div v-bind:id="dynamicId"></div>
+
+// package.json --> configuraciones y dependencias
+
+instalar vue-router --> 
+	npm install vue-router
+	npm install
