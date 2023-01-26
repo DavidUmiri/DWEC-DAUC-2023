@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue' // para utilizar completamente la reactividad
+import { reactive, ref, computed } from 'vue' // para utilizar completamente la reactividad
 
 // definimos unas propiedades
 defineProps({
@@ -87,6 +87,32 @@ function removeTodo(todo) {
 }
 
 // JS ASOCIADO AL PUNTO 8
+
+let id8 = 0
+
+const newTodo8 = ref('')
+const hideCompleted = ref(false)
+const todos8 = ref([
+  { id8: id8++, text: 'Learn HTML', done: true },
+  { id8: id8++, text: 'Learn JavaScript', done: true },
+  { id8: id8++, text: 'Learn Vue', done: false }
+])
+
+const filteredTodos = computed(() => {
+  return hideCompleted.value
+    ? todos8.value.filter((t) => !t.done)
+    : todos8.value
+})
+
+function addTodo8() {
+  todos8.value.push({ id8: id8++, text: newTodo8.value, done: false })
+  newTodo8.value = ''
+}
+
+function removeTodo8(todo) {
+  todos8.value = todos8.value.filter((t) => t !== todo)
+}
+
 // JS ASOCIADO AL PUNTO 9
 // JS ASOCIADO AL PUNTO 10
 // JS ASOCIADO AL PUNTO 11
@@ -155,7 +181,20 @@ function removeTodo(todo) {
   <hr>
   <h1>Punto 8</h1>
   <h2>Computed Property / Propiedad calculada</h2>
-
+  <form @submit.prevent="addTodo8">
+    <input v-model="newTodo8">
+    <button>Add Todo</button>
+  </form>
+  <ul>
+    <li v-for="todo in filteredTodos" :key="todo.id">
+      <input type="checkbox" v-model="todo.done">
+      <span :class="{ done: todo.done }">{{ todo.text }}</span>
+      <button @click="removeTodo8(todo)">X</button>
+    </li>
+  </ul>
+  <button @click="hideCompleted = !hideCompleted">
+    {{ hideCompleted? 'Show all': 'Hide completed' }}
+  </button>
 
   <hr>
   <h1>Punto 9</h1>
@@ -196,13 +235,12 @@ function removeTodo(todo) {
   color: red;
 }
 
-.titulo2 {
-  text-align: left;
-  color: blue;
-}
-
 h3 {
   color: darkgreen;
   font-size: 2vw;
+}
+
+.done {
+  text-decoration: line-through;
 }
 </style>
