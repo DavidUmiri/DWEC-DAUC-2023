@@ -2,15 +2,27 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Manzanas",
-      "fecha": "27/01/2023",
-      "descripcion": "Normal"
-    },
-    {
-      "id": 2,
       "nombre": "Pera",
       "fecha": "15/05/2023",
       "descripcion": "Rico"
+    },
+    {
+      "id": 2,
+      "nombre": "Manzana",
+      "fecha": "27/01/2023",
+      "descripcion": "Es un fruta muy buena"
+    },
+    {
+      "id": 3,
+      "nombre": "Fresas",
+      "fecha": "123456789",
+      "descripcion": "Prueba"
+    },
+    {
+      "id": 4,
+      "nombre": "Melón",
+      "fecha": "2/5/2010",
+      "descripcion": "Es un melon"
     }
   ]
 }

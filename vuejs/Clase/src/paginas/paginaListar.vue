@@ -39,6 +39,7 @@ function borrarProducto() {
                 productos.value = response.data
                 console.log(response.data);
             }
+            obtenerProductos();
         })
         // si no funciona esto
         .catch(e => {
@@ -46,17 +47,21 @@ function borrarProducto() {
         })
 }
 
-let nuevoProducto = ref(null)
-let nuevoId = ref(null)
-let nuevoFecha = ref(null)
-let nuevoDescripcion = ref(null)
+let data = {}
+data.id = ref(null)
+data.nombre = ref(null)
+data.fecha = ref(null)
+data.descripcion = ref(null)
 
 function crearProducto() {
-    servicioDatosProducto.create()
+    servicioDatosProducto.create(
+        JSON.stringify(data)
+    )
         .then(response => {
             if (response.data !== []) {
                 productos.value = response.data
             }
+            obtenerProductos();
         })
         .catch(e => {
             console.log(e);
@@ -80,19 +85,34 @@ onMounted(() => {
     <button type="button" @click="borrarProducto">Borrar</button>
     <br>
 
-    <input type="text" placeholder="Producto nuevo" v-model="nuevoProducto">
-    <input type="number" placeholder="Id nuevo" v-model="nuevoId">
-    <input type="text" placeholder="Fecha nueva" v-model="nuevoFecha">
-    <input type="text" placeholder="Descripcion nueva" v-model="nuevoDescripcion">
+    <!-- PDTE arreglar el fondo del input que se mete texto -->
+    <input type="number" placeholder="Id" v-model="data.id">
+    <input type="text" placeholder="Nombre" v-model="data.nombre">
+    <input type="text" placeholder="Fecha" v-model="data.fecha">
+    <input type="text" placeholder="Descripcion" v-model="data.descripcion">
     <button type="button" @click="crearProducto">Crear</button>
 
 
     <ul>
         <li v-for="(producto, id) in productos" :key="id">
-            {{ producto.id }}. {{ producto.nombre }}
+            {{ producto.id }} -- {{ producto.nombre }} -- {{ producto.fecha }} -- {{ producto.descripcion }}
         </li>
     </ul>
 
+    <table class="tabla" border="2px">
+        <tr v-for="(producto, id) in productos" :key="id">
+            <th>{{ producto.id }}</th>
+            <th>{{ producto.nombre }}</th>
+            <th>{{ producto.fecha }}</th>
+            <th>{{ producto.descripcion }}</th>
+        </tr>
+    </table>
 
 
 </template>
+
+<style>
+.tabla {
+    padding: 15px;
+}
+</style>
