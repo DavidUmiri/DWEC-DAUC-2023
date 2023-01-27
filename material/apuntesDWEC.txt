@@ -159,3 +159,8 @@ npm install
 
 apartado --> network
 sección --> fetch/xhr
+
+// recordar
+
+npm run dev
+json-server --watch bd.json
