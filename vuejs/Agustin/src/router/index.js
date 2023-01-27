@@ -4,7 +4,6 @@ import paginaListar from "@/paginas/paginaListar.vue";
 import autor from "@/paginas/autor.vue";
 import lorem from "@/paginas/lorem.vue";
 
-
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
