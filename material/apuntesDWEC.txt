@@ -137,3 +137,25 @@ REACTIVE
 instalar vue-router --> 
 	npm install vue-router
 	npm install
+
+// levantar un servidor con una base de datos
+
+npm install -g json-server
+json-server --watch bd.json
+
+GET    /posts
+GET    /posts/1
+POST   /posts
+PUT    /posts/1
+PATCH  /posts/1
+DELETE /posts/1
+
+// axios sirve para manejar APIs
+
+npm install axios
+npm install
+
+// navegador
+
+apartado --> network
+sección --> fetch/xhr
