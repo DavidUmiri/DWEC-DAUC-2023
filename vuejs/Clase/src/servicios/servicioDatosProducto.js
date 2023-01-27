@@ -18,7 +18,7 @@ class servicioDatosProducto {
     }
 
     delete(id) {
-        return http.delete(`/producto/${id}`);
+        return http.delete(`/productos/${id}`);
     }
 
     deleteAll() {

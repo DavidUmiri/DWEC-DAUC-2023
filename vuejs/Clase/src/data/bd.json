@@ -11,24 +11,6 @@
       "nombre": "Pera",
       "fecha": "15/05/2023",
       "descripcion": "Rico"
-    },
-    {
-      "id": 3,
-      "nombre": "Fresa",
-      "fecha": "21/01/2023",
-      "descripcion": "Bueno"
-    },
-    {
-      "id": 4,
-      "nombre": "Sandía",
-      "fecha": "03/05/2023",
-      "descripcion": "La mejor fruta"
-    },
-    {
-      "id": 5,
-      "nombre": "Plátanos",
-      "fecha": "01/01/2023",
-      "descripcion": "Potasio"
     }
   ]
 }
