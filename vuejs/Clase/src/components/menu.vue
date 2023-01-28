@@ -14,7 +14,7 @@ const props = defineProps({
     <span>{{ props.titulo }}</span>
     <nav>
         <RouterLink v-for="enlace in props.links" :key="enlace" :to="{ name: enlace }">
-            {{ enlace }} ---
+            {{ enlace }} |||
         </RouterLink>
     </nav>
 

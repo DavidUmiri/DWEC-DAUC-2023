@@ -3,8 +3,8 @@
     {
       "id": 1,
       "nombre": "Pera",
-      "fecha": "15/05/2023",
-      "descripcion": "Rico"
+      "fecha": "12/68/1555",
+      "descripcion": "Actualizado"
     },
     {
       "id": 2,
@@ -14,15 +14,21 @@
     },
     {
       "id": 3,
-      "nombre": "Fresas",
-      "fecha": "123456789",
-      "descripcion": "Prueba"
-    },
-    {
-      "id": 4,
       "nombre": "Melón",
       "fecha": "2/5/2010",
       "descripcion": "Es un melon"
+    },
+    {
+      "id": 4,
+      "nombre": "Sandía",
+      "fecha": "13/32/1544",
+      "descripcion": "La mejor fruta"
+    },
+    {
+      "id": 5,
+      "nombre": "Fresas",
+      "fecha": "23/65/9877",
+      "descripcion": "Nueva fruta"
     }
   ]
 }

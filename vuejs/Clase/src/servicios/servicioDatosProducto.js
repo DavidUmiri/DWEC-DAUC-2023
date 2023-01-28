@@ -22,7 +22,7 @@ class servicioDatosProducto {
     }
 
     deleteAll() {
-        return http.delete(`/productos`);
+        return http.delete("/productos");
     }
 
     findByNombre(nombre) {
