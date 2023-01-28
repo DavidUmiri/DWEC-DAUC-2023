@@ -48,7 +48,7 @@ function borrarProducto() {
 
 // FIXME no acepta la solicitud
 function borrarTodos() {
-    servicioDatosProducto.deleteAll('/productos')
+    servicioDatosProducto.deleteAll()
         .then(() => {
             console.log("Todos los productos han sido eliminados");
             obtenerProductos();
@@ -57,7 +57,6 @@ function borrarTodos() {
             console.log("Error al eliminar productos: ", error);
         });
 }
-
 
 
 let data = {}

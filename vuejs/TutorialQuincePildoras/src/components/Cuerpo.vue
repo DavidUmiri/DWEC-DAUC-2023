@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref, computed } from 'vue' // para utilizar completamente la reactividad
+import { reactive, ref, computed, onMounted, watch } from 'vue'
 
 // definimos unas propiedades
 defineProps({
@@ -114,7 +114,30 @@ function removeTodo8(todo) {
 }
 
 // JS ASOCIADO AL PUNTO 9
+
+const p = ref(null)
+
+onMounted(() => {
+  p.value.textContent = 'mounted!'
+})
+
 // JS ASOCIADO AL PUNTO 10
+
+const todoId = ref(1)
+const todoData = ref(null)
+
+async function fetchData() {
+  todoData.value = null
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/todos/${todoId.value}`
+  )
+  todoData.value = await res.json()
+}
+
+fetchData()
+
+watch(todoId, fetchData)
+
 // JS ASOCIADO AL PUNTO 11
 // JS ASOCIADO AL PUNTO 12
 // JS ASOCIADO AL PUNTO 13
@@ -128,21 +151,25 @@ function removeTodo8(todo) {
 
 <template>
 
+  <!--  -->
   <h1>Punto 1</h1>
   <h1>{{ titulo }} </h1>
   <h3>{{ contenido }} </h3>
 
+  <!--  -->
   <hr>
   <h1>Punto 2</h1>
   <h2>Declarative Rendering</h2>
   <p>Mensaje: {{ mensaje }}</p>
   <p>Cuenta: {{ contador.cuenta }}</p>
 
+  <!--  -->
   <hr>
   <h1>Punto 3</h1>
   <h2>Attribute Bindings / Enlaces de atributo</h2>
   <h1 :class="claseTitulo">{{ claseTitulo }}</h1>
 
+  <!--  -->
   <hr>
   <h1>Punto 4</h1>
   <h2>Event Listeners</h2>
@@ -150,11 +177,13 @@ function removeTodo8(todo) {
   <button @click="decrementar">decrementar</button>
   <p>El contador es {{ contador.cuenta }}</p>
 
+  <!--  -->
   <hr>
   <h1>Punto 5</h1>
   <h2 :class="claseTituloP4">Form Bindings, bindeo input []</h2>
   <input v-model="claseTituloP4" placeholder="Escribe algo">
 
+  <!--  -->
   <hr>
   <h1>Punto 6</h1>
   <h2>Conditional Rendering / Representación condicional</h2>
@@ -162,6 +191,7 @@ function removeTodo8(todo) {
   <h1 v-if="increible">👨‍🦲</h1>
   <h1 v-else>🎅</h1>
 
+  <!--  -->
   <hr>
   <h1>Punto 7</h1>
   <h2>List Rendering / Representación de lista</h2>
@@ -178,6 +208,7 @@ function removeTodo8(todo) {
     </li>
   </ul>
 
+  <!--  -->
   <hr>
   <h1>Punto 8</h1>
   <h2>Computed Property / Propiedad calculada</h2>
@@ -196,14 +227,22 @@ function removeTodo8(todo) {
     {{ hideCompleted? 'Show all': 'Hide completed' }}
   </button>
 
+  <!--  -->
   <hr>
   <h1>Punto 9</h1>
-  <h2></h2>
+  <h2>Lifecycle and Template Refs / Referencias de plantilla y ciclo de vida</h2>
+  <p ref="p">hola</p>
 
+  <!--  -->
   <hr>
   <h1>Punto 10</h1>
-  <h2></h2>
+  <h2>Watchers / Vigilantes</h2>
+  <p>Todo id: {{ todoId }}</p>
+  <button @click="todoId++">Fetch next todo</button>
+  <p v-if="!todoData">Loading...</p>
+  <pre v-else>{{ todoData }}</pre>
 
+  <!--  -->
   <hr>
   <h1>Punto 11</h1>
   <h2></h2>
