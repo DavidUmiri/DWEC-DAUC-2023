@@ -7,22 +7,10 @@
       "descripcion": "Actualizado"
     },
     {
-      "id": 2,
-      "nombre": "Manzana",
-      "fecha": "27/01/2023",
-      "descripcion": "Es un fruta muy buena"
-    },
-    {
-      "id": 4,
-      "nombre": "Sandía",
-      "fecha": "13/32/1544",
-      "descripcion": "La mejor fruta"
-    },
-    {
-      "id": 5,
-      "nombre": "Fresas",
-      "fecha": "23/65/9877",
-      "descripcion": "Nueva fruta"
+      "id": 3,
+      "nombre": "nuevo",
+      "fecha": "121",
+      "descripcion": "7848"
     }
   ]
 }

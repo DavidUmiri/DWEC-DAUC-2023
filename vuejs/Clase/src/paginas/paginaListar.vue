@@ -28,6 +28,7 @@ function buscarProducto() {
         .catch(e => {
             console.log(e);
         })
+
 }
 
 function borrarProducto() {
@@ -46,7 +47,7 @@ function borrarProducto() {
         })
 }
 
-// FIXME no acepta la solicitud
+// PDTE no acepta la solicitud
 function borrarTodos() {
     servicioDatosProducto.deleteAll()
         .then(() => {
@@ -58,7 +59,6 @@ function borrarTodos() {
         });
 }
 
-
 let data = {}
 data.id = ref(null)
 data.nombre = ref(null)
@@ -66,6 +66,13 @@ data.fecha = ref(null)
 data.descripcion = ref(null)
 
 function crearProducto() {
+
+    // let data = {}
+    // data.id = document.forms[0].elements[0].value
+    // data.nombre = document.forms[0].elements[0].value
+    // data.fecha = document.forms[0].elements[0].value
+    // data.descripcion = document.forms[0].elements[0].value
+
     servicioDatosProducto.create(JSON.stringify(data))
         .then(response => {
             if (response.data !== []) {
@@ -78,6 +85,7 @@ function crearProducto() {
             console.log(e);
         })
 }
+
 function actualizarProducto() {
     servicioDatosProducto.update(data.id, JSON.stringify(data))
         .then(response => {
@@ -101,12 +109,23 @@ onMounted(() => {
 
 <template>
 
+    <!--  -->
+    <form action="" method="post">
+        <input type="number" placeholder="Id" name="id">
+        <input type="text" placeholder="Nombre" name="nombre">
+        <input type="text" placeholder="Fecha" name="fecha">
+        <input type="text" placeholder="Descripcion" name="descripcion">
+        <input type="submit" value="Crear">
+    </form>
+    <hr>
+
+    <!--  -->
     <input id="idBuscar" type="text" placeholder="Producto a buscar" v-model="nombreProducto" autofocus>
     <button type="button" @click="buscarProducto">Buscar</button>
     <br>
     <input type="number" placeholder="Id" v-model="idProducto">
     <button type="button" @click="borrarProducto">Borrar</button>
-    <button type="button" @click="borrarTodos">Borrar todos los productos</button>
+    <button type="button" @click="borrarTodos">PDTE Borrar todos los productos</button>
     <br>
 
     <!-- PDTE placeholder object Object -->
@@ -116,13 +135,17 @@ onMounted(() => {
     <input type="text" placeholder="Descripcion" v-model="data.descripcion">
     <button type="button" @click="crearProducto">Crear</button>
     <button type="button" @click="actualizarProducto">Actualizar</button>
-
+    <hr>
     <ul>
         <li v-for="(producto, id) in productos" :key="id">
-            {{ producto.id }} || {{ producto.nombre }} || {{ producto.fecha }} || {{ producto.descripcion }}
+            <!-- {{ producto.id }} || -->
+            {{ producto.nombre }}
+            <!-- {{ producto.fecha }} || -->
+            <!-- {{ producto.descripcion }} -->
         </li>
     </ul>
 
+    <!--  -->
     <table class="tabla" border="1px">
         <tr>
             <th>Id</th>
@@ -143,7 +166,7 @@ onMounted(() => {
 
 <style>
 .tabla {
-    background-color: lightgreen;
+    background-color: lightcyan;
     text-align: center;
 }
 </style>

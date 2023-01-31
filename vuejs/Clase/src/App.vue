@@ -10,11 +10,11 @@ import { ref } from 'vue'
 
   <hr />
 
-  <p>APP</p>
+  <p>APP se mantiene</p>
   <main>
     <RouterView />
   </main>
-  <p>FIN</p>
+  <p>FIN se mantiene</p>
 </template>
 
 <style>
