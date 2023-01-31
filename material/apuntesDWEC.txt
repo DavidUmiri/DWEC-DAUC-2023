@@ -164,5 +164,3 @@ sección --> fetch/xhr
 
 npm run dev
 json-server --watch src/data/bd.json
-
-// 

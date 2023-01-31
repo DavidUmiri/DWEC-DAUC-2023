@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, ref, computed, onMounted, watch } from 'vue'
+import ChildComp from './ChildComp.vue'
 
 // definimos unas propiedades
 defineProps({
@@ -140,6 +141,9 @@ watch(todoId, fetchData)
 
 // JS ASOCIADO AL PUNTO 11
 // JS ASOCIADO AL PUNTO 12
+
+const greeting = ref('Hello from parent')
+
 // JS ASOCIADO AL PUNTO 13
 // JS ASOCIADO AL PUNTO 14
 // JS ASOCIADO AL PUNTO 15
@@ -245,11 +249,15 @@ watch(todoId, fetchData)
   <!--  -->
   <hr>
   <h1>Punto 11</h1>
-  <h2></h2>
+  <h2>Components / Componentes</h2>
+  <ChildComp />
 
+  <!--  -->
   <hr>
   <h1>Punto 12</h1>
-  <h2></h2>
+  <h2>Props / Accesorios</h2>
+  <ChildComp :msg="greeting" />
+
 
   <hr>
   <h1>Punto 13</h1>
