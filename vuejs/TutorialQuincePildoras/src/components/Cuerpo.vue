@@ -145,7 +145,13 @@ watch(todoId, fetchData)
 const greeting = ref('Hello from parent')
 
 // JS ASOCIADO AL PUNTO 13
+
+const childMsg = ref('No child msg yet')
+
 // JS ASOCIADO AL PUNTO 14
+
+const msg = ref('from parent')
+
 // JS ASOCIADO AL PUNTO 15
 
 </script>
@@ -258,15 +264,20 @@ const greeting = ref('Hello from parent')
   <h2>Props / Accesorios</h2>
   <ChildComp :msg="greeting" />
 
-
+  <!--  -->
   <hr>
   <h1>Punto 13</h1>
-  <h2></h2>
+  <h2>Emits / Emite</h2>
+  <ChildComp @response="(msg) => childMsg = msg" />
+  <p>{{ childMsg }}</p>
 
+  <!--  -->
   <hr>
   <h1>Punto 14</h1>
-  <h2></h2>
+  <h2>Slots / Ranuras</h2>
+  <ChildComp>Message: {{ msg }}</ChildComp>
 
+  <!--  -->
   <hr>
   <h1>Punto 15</h1>
   <h2></h2>
