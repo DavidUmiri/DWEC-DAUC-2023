@@ -1,11 +1,10 @@
 <script setup>
-import { ref } from 'vue'
-import { onMounted } from 'vue';
+import { ref, reactive, onMounted } from 'vue'
 import servicioDatosProducto from '../servicios/servicioDatosProducto.js';
 
 let productos = ref(null)
 let nombreProducto = ref(null)
-let idProducto = ref(null)
+// let idProducto = ref(null)
 
 function obtenerProductos() {
     servicioDatosProducto.getAll()
@@ -31,8 +30,8 @@ function buscarProducto() {
 
 }
 
-function borrarProducto() {
-    servicioDatosProducto.delete(idProducto.value)
+function borrarProducto(producto) {
+    servicioDatosProducto.delete(producto.id)
         .then(response => {
             // si funciona entra al if
             if (response.data !== []) {
@@ -59,34 +58,44 @@ function borrarTodos() {
         });
 }
 
-let data = {}
-data.id = ref(null)
-data.nombre = ref(null)
-data.fecha = ref(null)
-data.descripcion = ref(null)
+
+// function crearProducto() {
+
+//     let data = {}
+//     data.id = document.forms[0].elements[0].value
+//     data.nombre = document.forms[0].elements[1].value
+//     data.fecha = document.forms[0].elements[2].value
+//     data.descripcion = document.forms[0].elements[3].value
+
+//     servicioDatosProducto.create(JSON.stringify(data))
+//         .then(response => {
+//             console.log("Ha insertado el elemento...")
+//             obtenerProductos();
+//         })
+//         .catch(e => {
+//             console.log("Error al insertar...")
+//         })
+// }
+
+let productoObj = reactive({ id: null, nombre: null, fecha: null, descripcion: null })
 
 function crearProducto() {
+    servicioDatosProducto.create(JSON.stringify(productoObj)).then(response => {
+        console.log("Ha insertado el elemento...")
+    }).catch(e => {
+        console.log("Error al insertar...")
+    });
 
-    // let data = {}
-    // data.id = document.forms[0].elements[0].value
-    // data.nombre = document.forms[0].elements[0].value
-    // data.fecha = document.forms[0].elements[0].value
-    // data.descripcion = document.forms[0].elements[0].value
-
-    servicioDatosProducto.create(JSON.stringify(data))
-        .then(response => {
-            if (response.data !== []) {
-                productos.value = response.data
-                console.log(response.data);
-            }
-            obtenerProductos();
-        })
-        .catch(e => {
-            console.log(e);
-        })
+    obtenerProductos();
 }
 
 function actualizarProducto() {
+    let data = {}
+    data.id = document.forms[0].elements[0].value
+    data.nombre = document.forms[0].elements[1].value
+    data.fecha = document.forms[0].elements[2].value
+    data.descripcion = document.forms[0].elements[3].value
+
     servicioDatosProducto.update(data.id, JSON.stringify(data))
         .then(response => {
             if (response.data !== []) {
@@ -99,6 +108,7 @@ function actualizarProducto() {
             console.log(e);
         })
 }
+
 // montado del componente --> 
 // que cuando se cargue la pagina pregunte a los productos y me los dibuje
 onMounted(() => {
@@ -109,51 +119,52 @@ onMounted(() => {
 
 <template>
 
-    <!--  -->
-    <form action="" method="post">
-        <input type="number" placeholder="Id" name="id">
-        <input type="text" placeholder="Nombre" name="nombre">
-        <input type="text" placeholder="Fecha" name="fecha">
-        <input type="text" placeholder="Descripcion" name="descripcion">
+    <form @submit.prevent="crearProducto" action="" method="">
+        <input type="number" placeholder="Id" name="id" v-model="productoObj.id" autofocus><br>
+        <input type="text" placeholder="Nombre" name="nombre" v-model="productoObj.nombre"><br>
+        <input type="text" placeholder="Fecha" name="fecha" v-model="productoObj.fecha"><br>
+        <input type="text" placeholder="Descripcion" name="descripcion" v-model="productoObj.descripcion"><br>
         <input type="submit" value="Crear">
+        <button type="button" @click="actualizarProducto">Actualizar</button>
     </form>
     <hr>
 
-    <!--  -->
-    <input id="idBuscar" type="text" placeholder="Producto a buscar" v-model="nombreProducto" autofocus>
+    <input id="idBuscar" type="text" placeholder="Producto a buscar" v-model="nombreProducto">
     <button type="button" @click="buscarProducto">Buscar</button>
     <br>
-    <input type="number" placeholder="Id" v-model="idProducto">
-    <button type="button" @click="borrarProducto">Borrar</button>
-    <button type="button" @click="borrarTodos">PDTE Borrar todos los productos</button>
+    <!-- <input type="number" placeholder="Id" v-model="idProducto"> -->
+    <!-- <button type="button" @click="borrarProducto">Borrar</button> -->
+    <!-- <button type="button" @click="borrarTodos">PDTE Borrar todos los productos</button> -->
     <br>
 
     <!-- PDTE placeholder object Object -->
-    <input type="number" placeholder="Id" v-model="data.id">
+    <!-- <input type="number" placeholder="Id" v-model="data.id">
     <input type="text" placeholder="Nombre" v-model="data.nombre">
     <input type="text" placeholder="Fecha" v-model="data.fecha">
     <input type="text" placeholder="Descripcion" v-model="data.descripcion">
     <button type="button" @click="crearProducto">Crear</button>
     <button type="button" @click="actualizarProducto">Actualizar</button>
-    <hr>
+    <hr> -->
+
     <ul>
         <li v-for="(producto, id) in productos" :key="id">
-            <!-- {{ producto.id }} || -->
+            {{ producto.id }}.
             {{ producto.nombre }}
-            <!-- {{ producto.fecha }} || -->
+            <!-- {{ producto.fecha }} -->
             <!-- {{ producto.descripcion }} -->
         </li>
     </ul>
 
-    <!--  -->
+
     <table class="tabla" border="1px">
+        <th id="th" colspan="4">Click al producto para eliminar</th>
         <tr>
             <th>Id</th>
             <th>Producto</th>
             <th>Fecha</th>
             <th>Descripción</th>
         </tr>
-        <tr v-for="(producto, id) in productos" :key="id">
+        <tr @click="borrarProducto(producto)" v-for="(producto, id) in productos" :key="id">
             <td>{{ producto.id }}</td>
             <td>{{ producto.nombre }}</td>
             <td>{{ producto.fecha }}</td>
@@ -168,5 +179,13 @@ onMounted(() => {
 .tabla {
     background-color: lightcyan;
     text-align: center;
+}
+
+.tabla:hover {
+    cursor: pointer;
+}
+
+#th {
+    color: red;
 }
 </style>

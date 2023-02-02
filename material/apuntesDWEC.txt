@@ -113,10 +113,12 @@ ref --> para elementos simples
 reactive --> para objetos
 
 // variables a utillizar en el template
+
 const contador = reactive({ contador: 0 })
 const mensaje = ref('Hello World!')
 
 // variables internas que no utilizare en el template
+
 const autor = null
 console.log(mensaje.value);
 console.log(contador.cuenta);
@@ -130,6 +132,7 @@ REACTIVE
 	value NO
 
 // para vincular un atributo a un valor dinámico, usamos la directiva v-bind
+
 <div v-bind:id="dynamicId"></div>
 
 // package.json --> configuraciones y dependencias
@@ -160,7 +163,31 @@ npm install
 apartado --> network
 sección --> fetch/xhr
 
-// recordar
+// recordar antes de empezar
 
 npm run dev
 json-server --watch src/data/bd.json
+
+// API --> servidor --> json-server
+
+métodos --> get, post, delete
+
+// formulario
+
+let productos = ref(null)
+let nombreProducto = ref(null)
+let productoObj = reactive({nombre:null, descripcion: null})
+
+function crearProducto(){
+	servicioDatosProducto.create(JSON.stringify(productoObj)).then(response => {
+		alert("Ha insertado el elemento...")
+	}).catch(e=>{
+		alert("Error al insertar...")
+	});
+	obtenerProductos();
+}
+
+form @submit.prevent="crearProducto"
+
+input v-model="productoObj.nombre"
+input v-model="productoObj.descripcion"

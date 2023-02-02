@@ -2,15 +2,21 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Pera",
-      "fecha": "12/68/1555",
-      "descripcion": "Actualizado"
+      "nombre": "Sandias",
+      "fecha": "12/04/2019",
+      "descripcion": "Agua"
     },
     {
       "id": 3,
-      "nombre": "nuevo",
-      "fecha": "121",
-      "descripcion": "7848"
+      "nombre": "Limones",
+      "fecha": null,
+      "descripcion": null
+    },
+    {
+      "id": 4,
+      "nombre": "Cerezas",
+      "fecha": null,
+      "descripcion": null
     }
   ]
 }
