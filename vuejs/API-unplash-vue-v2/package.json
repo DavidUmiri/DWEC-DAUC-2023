@@ -1,0 +1,41 @@
+{
+  "name": "vue-unplush",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "Junip",
+  "private": true,
+  "scripts": {
+    "dev": "parcel index.html",
+    "start": "npm run dev",
+    "lint": "eslint --ext .js,.vue src",
+    "build": "node build/build.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "babel-preset-vue": "^2.0.2",
+    "bootstrap-vue": "^2.17.3",
+    "lodash": "^4.17.21",
+    "unsplash-js": "^5.0.0",
+    "vue": "^2.6.12",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-router": "^3.4.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@vue/component-compiler-utils": "^3.2.0",
+    "parcel-bundler": "^1.12.4",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
