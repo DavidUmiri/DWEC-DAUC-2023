@@ -2,6 +2,11 @@
 import { ref, reactive, onMounted } from 'vue'
 import servicioDatosProducto from '../servicios/servicioDatosProducto.js';
 
+// montado del componente --> cuando se cargue la pagina pregunte a los productos y me los dibuje
+onMounted(() => {
+    obtenerProductos()
+});
+
 let productos = ref(null)
 let nombreProducto = ref(null)
 // let idProducto = ref(null)
@@ -10,6 +15,7 @@ function obtenerProductos() {
     servicioDatosProducto.getAll()
         .then(response => {
             productos.value = response.data;
+            console.log(response.data[0]);
             console.log(response.data);
         })
         .catch(e => {
@@ -110,29 +116,26 @@ function actualizarProducto() {
         })
 }
 
-// montado del componente --> 
-// que cuando se cargue la pagina pregunte a los productos y me los dibuje
-onMounted(() => {
-    obtenerProductos()
-});
+
 
 </script>
 
 <template>
 
-    <form @submit.prevent="crearProducto" action="" method="">
+    <!-- <form @submit.prevent="crearProducto" action="" method="">
         <input type="number" placeholder="Id" name="id" v-model="productoObj.id" autofocus>
         <input type="text" placeholder="Nombre" name="nombre" v-model="productoObj.nombre">
         <input type="text" placeholder="Fecha" name="fecha" v-model="productoObj.fecha">
         <input type="text" placeholder="Descripcion" name="descripcion" v-model="productoObj.descripcion"><br>
         <input type="submit" value="Crear">
         <button type="button" @click="actualizarProducto">Actualizar</button>
-    </form>
+    </form> -->
     <hr>
 
-    <input id="idBuscar" type="text" placeholder="Producto a buscar" v-model="nombreProducto">
+    <!-- <input id="idBuscar" type="text" placeholder="Producto a buscar" v-model="nombreProducto">
     <button type="button" @click="buscarProducto">Buscar</button>
-    <br>
+    <br> -->
+
     <!-- <input type="number" placeholder="Id" v-model="idProducto"> -->
     <!-- <button type="button" @click="borrarProducto">Borrar</button> -->
     <!-- <button type="button" @click="borrarTodos">PDTE Borrar todos los productos</button> -->
@@ -147,17 +150,17 @@ onMounted(() => {
     <button type="button" @click="actualizarProducto">Actualizar</button>
     <hr> -->
 
-    <!-- <ul>
+    <ul>
         <li v-for="(producto, id) in productos" :key="id">
             {{ producto.id }}.
             {{ producto.nombre }}
             {{ producto.fecha }}
             {{ producto.descripcion }}
         </li>
-    </ul> -->
+    </ul>
 
 
-    <table class="tabla" border="1px">
+    <!-- <table class="tabla" border="1px">
         <th id="th" colspan="4">Click al producto para eliminar</th>
         <tr>
             <th>Id</th>
@@ -171,7 +174,7 @@ onMounted(() => {
             <td>{{ producto.fecha }}</td>
             <td>{{ producto.descripcion }}</td>
         </tr>
-    </table>
+    </table> -->
 
 
 </template>

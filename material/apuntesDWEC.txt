@@ -191,3 +191,47 @@ form @submit.prevent="crearProducto"
 
 input v-model="productoObj.nombre"
 input v-model="productoObj.descripcion"
+
+// objetivo de hoy
+
+hacer una API -->
+
+si es publica --> get lo almacenas en una variable data que sera un arrau --> post/delete (en local)
+
+si es propia --> json-server (bd.json) --> get/post/delete
+
+baseURL: "https://api.unsplash.com/",
+
+Authorization: Client-ID YOUR_ACCESS_KEY
+
+https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
+
+YOUR_ACCESS_KEY --> tDmWuSHock3LaL3PHw3p260slWA-Rf5PPVTWa913kEY
+
+{
+  "urls": {
+     "raw": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9",
+     "full": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&fm=jpg&q=80",
+     "regular": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&fm=jpg&fit=crop&w=1080&q=80&fit=max",
+     "small": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&&fm=jpg&w=400&fit=max",
+     "thumb": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&fm=jpg&w=200&fit=max"
+  },
+  // ... other photo fields
+}
+
+Códigos de estado -->
+
+200 - Bien	Todo funcionó como se esperaba
+
+400 Petición Incorrecta	La solicitud fue inaceptable, a menudo debido a la falta de un parámetro requerido
+
+401 - No autorizado	Token de acceso no válido
+
+403 - Prohibido	Faltan permisos para realizar la solicitud
+
+404 No encontrado	El recurso solicitado no existe
+
+500, 503	Algo salió mal de nuestra parte
+
+pasos consumir api unplash -->
+

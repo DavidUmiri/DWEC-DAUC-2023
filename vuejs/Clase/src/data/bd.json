@@ -5,18 +5,6 @@
       "nombre": "Sandias",
       "fecha": "12/04/2019",
       "descripcion": "Agua"
-    },
-    {
-      "id": 3,
-      "nombre": "Limones",
-      "fecha": null,
-      "descripcion": null
-    },
-    {
-      "id": 4,
-      "nombre": "Cerezas",
-      "fecha": null,
-      "descripcion": null
     }
   ]
 }
