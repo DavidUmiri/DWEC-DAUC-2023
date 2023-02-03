@@ -1,45 +1,22 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import barraMenu from './components/menu.vue'
+import { ref } from 'vue'
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <barraMenu titulo="Menú Principal" :links="['inicio', 'listar', 'autor', 'lorem', 'apiImagenes']" />
   </header>
 
+  <hr />
+
+  <p>APP se mantiene</p>
   <main>
-    <TheWelcome />
+    <RouterView />
   </main>
+  <p>FIN se mantiene</p>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>

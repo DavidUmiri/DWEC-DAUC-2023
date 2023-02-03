@@ -260,3 +260,4 @@ actualizar dependencias -->
 npm install -g npm-check-updates
 ncu
 ncu -u
+npm install
