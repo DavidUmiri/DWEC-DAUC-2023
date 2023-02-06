@@ -208,6 +208,13 @@ https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
 
 YOUR_ACCESS_KEY --> tDmWuSHock3LaL3PHw3p260slWA-Rf5PPVTWa913kEY
 
+	baseURL: "https://api.unsplash.com/",
+    headers: {
+        "Content-type": "application/json",
+        "Authorization": "Client-ID tDmWuSHock3LaL3PHw3p260slWA-Rf5PPVTWa913kEY"
+
+    }
+
 {
   "urls": {
      "raw": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9",
