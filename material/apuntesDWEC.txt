@@ -296,3 +296,9 @@ Puedes aplicar el linter con el siguiente comando:
 ```bash
 npm run lint
 ```
+
+// comandos vue
+
+npm install -g @vue/cli
+vue create tareas
+npm run serve
