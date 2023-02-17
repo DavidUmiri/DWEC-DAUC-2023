@@ -1,17 +1,20 @@
-.errorSpam {    
-    display: block;    
+.errorSpam {
+    display: block;
     color: red;
     font-style: italic;
 }
+
 .error {
     border: solid 3px #FF0000;
 }
+
 fieldset {
     background: #e0ffff;
     width: 600px;
-    border-radius: 5px;    
+    border-radius: 5px;
     font-size: 18px;
 }
+
 legend {
     text-align: center;
     font-size: 20px;
@@ -24,6 +27,7 @@ label {
     color: #51515B;
     font-size: 20px;
 }
+
 input,
 select {
     display: block;
