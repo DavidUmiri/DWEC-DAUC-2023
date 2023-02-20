@@ -44,7 +44,7 @@ function dibujarProvincias(e) {
     let provincias = map.get(this.value)
     // let provincias = map.get(e.target.value)
 
-    // FIXME: provincias --> da error de iteración en la consola
+    // provincias --> da error de iteración en la consola
     for (const provincia of provincias) {
         // console.log(provincia);
         let opcion = document.createElement("option")
