@@ -1,4 +1,4 @@
-// exámen
+// EXÁMEN
 	- formulario --> formulario.elements["idNombre"].checkValidity() --> formulario.elements["idNombre"].validity
 	- formulario --> seguir el siguiente orden para modificar el mensaje de error:
 	 	inputNombre.setCustomValidity("El campo: " + formulario.elements["idNombre"].name + " no puede estar en blanco");
@@ -8,3 +8,127 @@
 	- function obtenerProductos() --> vacío
 	- ejercicio --> implementar un botón que cree, modifique, actualice o borre
 	- sintaxis RouterLink --> nos lo da
+
+// TIPOS DE EVENTOS A ESCUCHAR
+    - blur Cuando el elemento pierde el foco.
+    - click El usuario hace clic sobre el elemento.
+    - dblclick El usuario hace doble clic sobre el elemento.
+    - focus El elemento gana el foco.
+    - keydown El usuario presiona una tecla.
+    - keypress El usuario presiona una tecla y la mantiene pulsada.
+    - keyup El usuario libera la tecla.
+    - load El documento termina su carga.
+    - mousedown El usuario presiona el botón del ratón en un elemento.
+    - mousemove El usuario mueve el puntero del ratón sobre un elemento.
+    - mouseout El usuario mueve el puntero fuera de un elemento.
+    - mouseover El usuario mantiene el puntero sobre un elemento.
+    - mouseup El usuario libera el botón pulsado del ratón sobre un elemento.
+    - unload El documento se descarga, bien porque se cierra la ventana, bien porque se navega a otra página.
+
+// EVENTOS EJEMPLO AMPLIADO
+
+	<input id="idBoton" type="button" onclick="decirHola(this)" />
+	function decirHola(elemento) {
+		alert("Has pulsado : " + elemento.id );
+	}
+
+	<input id="idBoton" type="button" onclick="decirHola(event)" />
+	function decirHola(e) {
+		alert("elemento pulsado : " + e.target.textContent);
+	}
+
+	document.getElementById("idhref").addEventListener("click", decirHola);
+	function decirHola(e){
+		alert("elemento pulsado : " + e.target.textContent);
+		alert("elemento pulsado : " + this.textContent);
+		e.preventDefault();
+	}
+
+// ACCEDER A ELEMENTOS DE FORMULARIOS
+	text --> let elemento = document.getElementById("texto").value
+	radio button --> if(elementos[i].checked == true)
+	checkbox --> if(elementos[i].checked == true)
+	select --> 
+		let elemento = document.getElementById("aprobar");
+		
+		for(i=0; i<elemento.options.length; i++){
+			console.log("Valor de la opcion " + elemento.options[i].value);
+		}
+		let sel = elemento.selectedIndex;
+		alert(elemento.options[sel].value + elemento.options[sel].text);
+		elemento.selectIndex = 0;
+
+// VALIDACIÓN Y ENVÍO DE FORMULARIOS
+	La estructura típica es la siguiente:
+		<form onsubmit="return validarFecha();">
+	Deshabilitar enviar un formulario dos veces
+		document.getElementById("idSubmit").disabled = true;
+	Enviar un formulario desde código
+		let elemento = document.getElementById("formulario");
+		elemento.submit();
+	ACCESO A RESTRICCIONES DE HTML
+		checkValidity()
+			método que nos dice si el campo o el formulario es válido o no
+		validationMessage()
+			en caso de que un campo no sea válido esta propiedad contiene el texto del error de validación proporcionado por el navegador
+		validity
+			valueMissing
+				Ejemplo: un formulario que requiere un correo electrónico, pero el usuario no ha proporcionado ningún valor
+			typeMismatch
+				Ejemplo: un campo de entrada de correo electrónico que espera una dirección de correo electrónico válida, pero el usuario ha proporcionado una cadena de texto que no es una dirección de correo electrónico.
+			patterMismatch
+				Ejemplo: un campo de entrada de número de teléfono que espera que se proporcione el número en el formato 123-456-7890, pero el usuario ha proporcionado un número de teléfono que no coincide con ese formato.
+			tooShort/tooLong
+				Ejemplo: un campo de entrada de contraseña que requiere un mínimo de 8 caracteres, pero el usuario ha proporcionado solo 5 caracteres, la propiedad tooShort será verdadera.
+			rangeUnderflow/rangeOverflow
+				Ejemplo: un campo de entrada numérica que requiere un valor entre 0 y 100, pero el usuario ha proporcionado un valor de 200, la propiedad rangeOverflow será verdadera.
+			stepMismatch
+				Ejemplo: un campo de entrada numérica que requiere que el usuario proporcione un valor que sea múltiplo de 5, pero el usuario ha proporcionado un valor que no cumple con ese requisito.
+			customError
+				Ejemplo: un formulario que verifica si un nombre de usuario ya está en uso y establece un mensaje de error personalizado si ese es el caso.
+			valid
+				Ejemplo: un formulario que se ha completado correctamente sin errores en los campos obligatorios, de formato, de longitud, de rango, de paso o personalizados.
+		setCustomValidity(mensaje)
+			Se utiliza para establecer un mensaje de error personalizado en el campo de formulario. La cadena de texto mensaje proporcionada será el mensaje de error personalizado. Al utilizar esta función, se invalida el campo y se marca como no válido. Para quitar el error personalizado, se debe llamar a setCustomValidity('') y establecer una cadena vacía como valor
+
+// EXPRESIONES REGULARES
+	g: Realiza una búsqueda global en toda la cadena, en lugar de detenerse en la primera coincidencia.
+    i: Realiza una búsqueda que no distingue entre mayúsculas y minúsculas.
+    m: Realiza una búsqueda que incluye saltos de línea.
+    s: Permite que el punto . en la expresión regular coincida con cualquier carácter, incluyendo saltos de línea.
+    u: Permite el uso de caracteres Unicode en la expresión regular.
+    y: Realiza una búsqueda pegajosa, comenzando en la posición actual de la búsqueda.
+    d: Activa el modo de depuración para la expresión regular.
+    x: Ignora los espacios en blanco y los comentarios dentro de la expresión regular.
+    A: Hace que la expresión regular solo coincida al principio de la cadena.
+    D: Hace que la expresión regular no coincida al final de la cadena.
+    U: Hace que la expresión regular coincida al final de la cadena incluso en presencia de saltos de línea.
+
+	^ - Representa el inicio de una cadena.
+    $ - Representa el final de una cadena.
+    . - Representa cualquier carácter.
+    * - Representa cero o más repeticiones del elemento anterior.
+    + - Representa una o más repeticiones del elemento anterior.
+    ? - Representa cero o una repetición del elemento anterior.
+    | - Representa una alternativa entre dos elementos.
+    [] - Representa un conjunto de caracteres posibles.
+    () - Agrupa elementos para aplicar operadores a todo el grupo.
+    \ - Escapa caracteres especiales para que sean tratados literalmente.
+    \d - Representa cualquier dígito.
+    \w - Representa cualquier carácter alfanumérico o guion bajo.
+    \s - Representa cualquier espacio en blanco.
+    \D - Representa cualquier carácter que no sea un dígito.
+    \W - Representa cualquier carácter que no sea alfanumérico ni un guion bajo.
+    \S - Representa cualquier carácter que no sea un espacio en blanco.
+    {n} - Representa exactamente n repeticiones del elemento anterior.
+    {n,} - Representa al menos n repeticiones del elemento anterior.
+    {n,m} - Representa entre n y m repeticiones del elemento anterior.
+
+	Ejemplos:
+		DNI: /^(\d{8})([A-Z])$/i
+		Número de teléfono: /^(0034|\+34)?[6789]\d{8}$/i
+		Dirección de correo electrónico: /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/i
+		Código postal: /^\d{5}$/i
+		Número de tarjeta de crédito: /^4[0-9]{12}(?:[0-9]{3})?$/i
+		Fecha: /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/i
+		Contraseña: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/i
