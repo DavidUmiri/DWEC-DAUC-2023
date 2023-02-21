@@ -1,3 +1,16 @@
+// evento de color al body que sucede cuando el elemento pierde el foco
+let input_color_body = document.getElementById("id_color_body");
+input_color_body.addEventListener("blur", (evento) => {
+  document.body.style.backgroundColor = evento.target.value;
+})
+
+// elegir el color favorito e introducir el codigo del color en el input text
+let input_paleta_color = document.forms[0].elements["id_input_color"];
+let input_nombre_color = document.forms[0].elements["id_nombre_color"];
+input_paleta_color.addEventListener("focus", (evento) => {
+  input_nombre_color.value = evento.target.value;
+})
+
 /*********************************************************************************************
 /*********************************************************************************************
         Rellenar el valor del campo nombre utilizando un "prompt" para introducir los datos
@@ -49,23 +62,25 @@ document.forms[0]['reset'].addEventListener("click", function () {
       Recoger, recorrer y mostrar el contenido del formulario
 *********************************************************************************************
 *********************************************************************************************/
-
+// añade un evento al input de tipo submit
 document.forms[0].addEventListener("submit", (event) => {
-
+  // se resetea el apartado de respuestas
   document.getElementById("answers").innerHTML = "<h2>Respuestas</h2>";
-
+  // recorremos todos los elementos del formulario
   for (let e of document.forms[0].elements) {
-
+    // variables
     let contentText = "";
     let container = document.createElement("p");
-
+    // dependiendo del elemento entra en un caso u otro
     switch (e.type) {
+      // si es un checkbox marcado se le agrega al contentText el nombre del elemento y su valor
       case "checkbox":
         if (e.checked) contentText += `${e.name}: ${e.value}`;
         break;
       case "radio":
         if (e.checked) contentText += `${e.name}: ${e.value}`;
         break;
+      // si es un input color se comprueba que su valor no este vacio y se le agrega al contentText el nombre y el valor
       case "color":
         if (e.value != "") contentText += `${e.name}: ${e.value}`;
         break;
@@ -73,15 +88,15 @@ document.forms[0].addEventListener("submit", (event) => {
         if (e.value != "" && e.type != "submit" && e.type != "reset") contentText += `${e.name}: ${e.value}`;
         break;
     }
-
+    // color del texto del parrafo segun el color elegido
     if (e.type == "color") container.style.color = `${e.value}`;
-
+    // si el texto es distinto de vacio lo insertamos en la seccion respuestas
     if (contentText != "") {
       container.appendChild(document.createTextNode(contentText));
       document.getElementById("answers").appendChild(container);
     }
   }
-
+  // esto cancela el evento, lo que significa que cualquier acción por defecto que deba producirse como resultado de este evento, no ocurrirá
   event.preventDefault();
 })
 

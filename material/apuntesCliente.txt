@@ -13,6 +13,7 @@
 	- json-server --watch bd.
 
 // TIPOS DE EVENTOS A ESCUCHAR
+	- change El evento change se dispara para elementos <input>, <select>, y <textarea> cuando una alteración al valor de un elemento es confirmada por el usuario
     - blur Cuando el elemento pierde el foco.
     - click El usuario hace clic sobre el elemento.
     - dblclick El usuario hace doble clic sobre el elemento.
@@ -95,37 +96,6 @@
 			Se utiliza para establecer un mensaje de error personalizado en el campo de formulario. La cadena de texto mensaje proporcionada será el mensaje de error personalizado. Al utilizar esta función, se invalida el campo y se marca como no válido. Para quitar el error personalizado, se debe llamar a setCustomValidity('') y establecer una cadena vacía como valor
 
 // EXPRESIONES REGULARES
-	g: Realiza una búsqueda global en toda la cadena, en lugar de detenerse en la primera coincidencia.
-    i: Realiza una búsqueda que no distingue entre mayúsculas y minúsculas.
-    m: Realiza una búsqueda que incluye saltos de línea.
-    s: Permite que el punto . en la expresión regular coincida con cualquier carácter, incluyendo saltos de línea.
-    u: Permite el uso de caracteres Unicode en la expresión regular.
-    y: Realiza una búsqueda pegajosa, comenzando en la posición actual de la búsqueda.
-    d: Activa el modo de depuración para la expresión regular.
-    x: Ignora los espacios en blanco y los comentarios dentro de la expresión regular.
-    A: Hace que la expresión regular solo coincida al principio de la cadena.
-    D: Hace que la expresión regular no coincida al final de la cadena.
-    U: Hace que la expresión regular coincida al final de la cadena incluso en presencia de saltos de línea.
-
-	^ - Representa el inicio de una cadena.
-    $ - Representa el final de una cadena.
-    . - Representa cualquier carácter.
-    * - Representa cero o más repeticiones del elemento anterior.
-    + - Representa una o más repeticiones del elemento anterior.
-    ? - Representa cero o una repetición del elemento anterior.
-    | - Representa una alternativa entre dos elementos.
-    [] - Representa un conjunto de caracteres posibles.
-    () - Agrupa elementos para aplicar operadores a todo el grupo.
-    \ - Escapa caracteres especiales para que sean tratados literalmente.
-    \d - Representa cualquier dígito.
-    \w - Representa cualquier carácter alfanumérico o guion bajo.
-    \s - Representa cualquier espacio en blanco.
-    \D - Representa cualquier carácter que no sea un dígito.
-    \W - Representa cualquier carácter que no sea alfanumérico ni un guion bajo.
-    \S - Representa cualquier carácter que no sea un espacio en blanco.
-    {n} - Representa exactamente n repeticiones del elemento anterior.
-    {n,} - Representa al menos n repeticiones del elemento anterior.
-    {n,m} - Representa entre n y m repeticiones del elemento anterior.
 
 	Ejemplos:
 		DNI: /^(\d{8})([A-Z])$/i
