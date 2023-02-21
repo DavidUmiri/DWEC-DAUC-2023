@@ -46,7 +46,7 @@ function borrarProducto(producto) {
         })
 }
 
-// PDTE no acepta la solicitud
+// TODO no acepta la solicitud
 function borrarTodos() {
     servicioDatosProducto.deleteAll()
         .then(() => {

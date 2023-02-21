@@ -75,8 +75,11 @@ document.forms[0].addEventListener("submit", (event) => {
     }
 
     if (e.type == "color") container.style.color = `${e.value}`;
-    container.appendChild(document.createTextNode(contentText));
-    document.getElementById("answers").appendChild(container);
+
+    if (contentText != "") {
+      container.appendChild(document.createTextNode(contentText));
+      document.getElementById("answers").appendChild(container);
+    }
   }
 
   event.preventDefault();
@@ -94,8 +97,9 @@ for (let e of document.getElementsByClassName('day-available')) {
 
   e.addEventListener("click", (event) => {
 
-    let diaMarcado = event.target.id.substring(9);
+    let diaMarcado = event.target.id.substring(9); // de id_check_monday coge monday y asi sucesivamente
 
+    // si el Set contiene el dia lo borre del Set, sino añade el dia marcado
     if (dias.has(diaMarcado)) {
       dias.delete(diaMarcado);
     } else {
