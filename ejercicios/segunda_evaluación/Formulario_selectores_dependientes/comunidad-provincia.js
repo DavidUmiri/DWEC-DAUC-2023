@@ -52,7 +52,6 @@ function dibujarProvincias(e) {
         opcion.innerHTML = provincia
         formulario.elements["id_provincia"].appendChild(opcion)
     }
-
 }
 
 // validacion

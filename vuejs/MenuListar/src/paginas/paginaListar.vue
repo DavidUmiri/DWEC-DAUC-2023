@@ -27,7 +27,6 @@ function buscarProducto() {
         .catch(e => {
             console.log(e);
         })
-
 }
 
 function borrarProducto(producto) {
@@ -49,40 +48,22 @@ function borrarProducto(producto) {
 // TODO no acepta la solicitud
 function borrarTodos() {
     servicioDatosProducto.deleteAll()
-        .then(() => {
-            console.log("Todos los productos han sido eliminados");
-            obtenerProductos();
+        .then(response => {
+            productos.value = response.data;
+            borrarProducto(response.data.id);
+            console.log(response.data);
         })
         .catch(error => {
             console.log("Error al eliminar productos: ", error);
         });
 }
 
-
-// function crearProducto() {
-
-//     let data = {}
-//     data.id = document.forms[0].elements[0].value
-//     data.nombre = document.forms[0].elements[1].value
-//     data.fecha = document.forms[0].elements[2].value
-//     data.descripcion = document.forms[0].elements[3].value
-
-//     servicioDatosProducto.create(JSON.stringify(data))
-//         .then(response => {
-//             console.log("Ha insertado el elemento...")
-//             obtenerProductos();
-//         })
-//         .catch(e => {
-//             console.log("Error al insertar...")
-//         })
-// }
-
 let productoObj = reactive({ id: null, nombre: null, fecha: null, descripcion: null })
 
 function crearProducto() {
     servicioDatosProducto.create(JSON.stringify(productoObj)).then(response => {
         obtenerProductos();
-        productoObj = ""; // PDTE lo ponemos a texto vacío
+        productoObj = "";
         console.log("Ha insertado el elemento...")
     }).catch(e => {
         console.log("Error al insertar...")
@@ -119,7 +100,6 @@ onMounted(() => {
 </script>
 
 <template>
-
     <form @submit.prevent="crearProducto" action="" method="">
         <input type="number" placeholder="Id" name="id" v-model="productoObj.id" autofocus>
         <input type="text" placeholder="Nombre" name="nombre" v-model="productoObj.nombre">
@@ -140,21 +120,21 @@ onMounted(() => {
 
     <!-- PDTE placeholder object Object -->
     <!-- <input type="number" placeholder="Id" v-model="data.id">
-    <input type="text" placeholder="Nombre" v-model="data.nombre">
-    <input type="text" placeholder="Fecha" v-model="data.fecha">
-    <input type="text" placeholder="Descripcion" v-model="data.descripcion">
-    <button type="button" @click="crearProducto">Crear</button>
-    <button type="button" @click="actualizarProducto">Actualizar</button>
-    <hr> -->
+                                <input type="text" placeholder="Nombre" v-model="data.nombre">
+                                <input type="text" placeholder="Fecha" v-model="data.fecha">
+                                <input type="text" placeholder="Descripcion" v-model="data.descripcion">
+                                <button type="button" @click="crearProducto">Crear</button>
+                                <button type="button" @click="actualizarProducto">Actualizar</button>
+                                <hr> -->
 
     <!-- <ul>
-        <li v-for="(producto, id) in productos" :key="id">
-            {{ producto.id }}.
-            {{ producto.nombre }}
-            {{ producto.fecha }}
-            {{ producto.descripcion }}
-        </li>
-    </ul> -->
+                                    <li v-for="(producto, id) in productos" :key="id">
+                                        {{ producto.id }}.
+                                        {{ producto.nombre }}
+                                        {{ producto.fecha }}
+                                        {{ producto.descripcion }}
+                                    </li>
+                                </ul> -->
 
 
     <table class="tabla" border="1px">
@@ -172,8 +152,6 @@ onMounted(() => {
             <td>{{ producto.descripcion }}</td>
         </tr>
     </table>
-
-
 </template>
 
 <style>
