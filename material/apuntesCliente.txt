@@ -2,17 +2,15 @@
 	- formulario --> formulario.elements["idNombre"].checkValidity() --> formulario.elements["idNombre"].validity
 	- sorpresa --> formulario DOM
 	- formulario doble validación
-	- formulario --> seguir el siguiente orden para modificar el mensaje de error:
-	 	inputNombre.setCustomValidity("El campo: " + formulario.elements["idNombre"].name + " no puede estar en blanco");
-        document.getElementById('idNombreError').innerHTML = inputNombre.validationMessage;
+	- formulario validacion api
+	- formulario acceso
 	- proyecto vue --> hacerlo funcionar
 	- servicioDatosProducto --> vacío, nosotros implementamos los métodos correspondientes
 	- function obtenerProductos() --> vacío
 	- ejercicio --> implementar un botón que cree, modifique, actualice o borre
 	- sintaxis RouterLink --> nos lo da
-	- vue --> formularios, peticiones comunicación con la api
-	- formulario validacion api
-	- formulario acceso
+	- vue --> formularios, peticiones y comunicación con la api
+	- json-server --watch bd.
 
 // TIPOS DE EVENTOS A ESCUCHAR
     - blur Cuando el elemento pierde el foco.

@@ -4,7 +4,7 @@
 
 <template>
     <div>
-        <h1>Página Principal</h1>
+        <h6>Página principal</h6>
         <section>
             <img src="../../public/wallhaven-3zypzy.png" alt="">
             <img src="../../public/wallhaven-72xwvy.png" alt="">
@@ -16,10 +16,15 @@
 </template>
 
 <style scoped>
+h6 {
+    text-align: center;
+    margin: 3%;
+}
+
 section {
     display: flex;
-    width: 100%;
-    height: 90vh;
+    width: 85%;
+    height: 50vh;
     margin: 0 auto;
 }
 

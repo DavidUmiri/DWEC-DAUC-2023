@@ -1,0 +1,28 @@
+{
+  "productos": [
+    {
+      "id": 2,
+      "nombre": "Fresas",
+      "fecha": "21/01/1979",
+      "descripcion": "Nueva"
+    },
+    {
+      "id": 3,
+      "nombre": "Melocotones",
+      "fecha": "12/12/12",
+      "descripcion": "Febrero"
+    },
+    {
+      "id": 1,
+      "nombre": "Sandias",
+      "fecha": "15/05/1998",
+      "descripcion": "La mejor"
+    },
+    {
+      "id": 4,
+      "nombre": "Peras",
+      "fecha": "sin fecha",
+      "descripcion": "sin desc"
+    }
+  ]
+}

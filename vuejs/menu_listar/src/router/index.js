@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import paginaInicio from "@/paginas/paginaInicio.vue";
-import paginaListar from "@/paginas/paginaListar.vue";
+import inicio from "@/paginas/inicio.vue";
+import listar from "@/paginas/listar.vue";
 import autor from "@/paginas/autor.vue";
 import lorem from "@/paginas/lorem.vue";
 
@@ -10,22 +10,22 @@ const router = createRouter({
         //Públicas
         {
             path: '/',
-            name: 'inicio',
-            component: paginaInicio
+            name: 'INICIO',
+            component: inicio
         },
         {
             path: '/listado',
-            name: 'listar',
-            component: paginaListar
+            name: 'LISTAR',
+            component: listar
         },
         {
             path: '/autor',
-            name: 'autor',
+            name: 'AUTOR',
             component: autor
         },
         {
             path: '/lorem',
-            name: 'lorem',
+            name: 'LOREM',
             component: lorem
         },
 
