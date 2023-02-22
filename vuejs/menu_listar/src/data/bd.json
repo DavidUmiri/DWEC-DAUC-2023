@@ -17,12 +17,6 @@
       "nombre": "Sandias",
       "fecha": "15/05/1998",
       "descripcion": "La mejor"
-    },
-    {
-      "id": 4,
-      "nombre": "Peras",
-      "fecha": "sin fecha",
-      "descripcion": "sin desc"
     }
   ]
 }

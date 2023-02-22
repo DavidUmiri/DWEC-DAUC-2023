@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive, onMounted } from "vue";
-import servicioDatosProducto from "../servicios/servicioDatosProducto.js";
+import servicioDatosProducto from "../servicios/servicioDatosProducto";
 
 let productos = ref(null);
 let nombreProducto = ref(null);
@@ -113,8 +113,7 @@ function actualizarProducto() {
         });
 }
 
-// montado del componente -->
-// que cuando se cargue la pagina pregunte a los productos y me los dibuje
+// montado del componente --> que cuando se cargue la pagina pregunte a los productos y me los dibuje
 onMounted(() => {
     obtenerProductos();
 });

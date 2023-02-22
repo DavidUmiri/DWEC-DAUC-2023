@@ -32,7 +32,7 @@ const router = createRouter({
         //Si se produce un error
         {
             path: '/:pathMatch(.*)*',
-            redirect: () => ({ name: 'inicio' })
+            redirect: () => ({ name: 'INICIO' })
         }
     ]
 
