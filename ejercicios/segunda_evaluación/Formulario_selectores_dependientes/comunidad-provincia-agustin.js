@@ -15,7 +15,7 @@ info.forEach((v, k) => {
     opcion.innerHTML = k
     formulario.elements['id_autonomia'].appendChild(opcion);
     //Asociar evento click [Firefox]
-    //opcion.addEventListener("click", dibujarProvincias)
+    // opcion.addEventListener("click", dibujarProvincias)
 });
 
 // Capturamos el evento, [chrome]
