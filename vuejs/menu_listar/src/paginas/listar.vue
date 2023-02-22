@@ -10,7 +10,7 @@ function obtenerProductos() {
         .getAll()
         .then((response) => {
             const data = response.data;
-            // Ordenar los productos por su Id utilizando sort() de JavaScript
+            // Ordenar los productos por su id utilizando sort() de JavaScript
             const productosOrdenados = data.sort((a, b) => a.id - b.id);
             // Asignar los productos ordenados a la variable productos
             productos.value = productosOrdenados;
