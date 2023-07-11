@@ -26,7 +26,8 @@ function obtenerProductos(){
         while(id<=longitud){
         
         ricky.value.push({id:id++,nombre:response.data.results[i].name,creacion:response.data.results[i].created })
-        i++;        
+        i++;     
+        console.log(response.data)   
         console.log(response.data.results[i]);
         }
         
